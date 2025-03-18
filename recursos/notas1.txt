@@ -1,0 +1,15 @@
+Notas..
+
+estructura de proyecto
+
+----------------------------------------------------------------
+SISTEMA GESTION AUTOMOVILES | Universidad Tecnologica de Tijuana
+----------------------------------------------------------------
+PROGRAMA DE GESTION DE AGENCIA DE AUTOMOVILES Version 1.0
+----------------------------------------------------------------
+MENU OPCIONES|DIGITE OPCION NUMERICA
+1. opcion1
+2. opcion1
+3. opcion1
+4. opcion1
+5. opcion1
