@@ -17,6 +17,6 @@ public class App {
         switch(opcionUsuario){} //switch para todos los posibles casos
 
 
-        input.close();
+        input.close(); //cerrando objeto tipo Scanner.
     }
 }
