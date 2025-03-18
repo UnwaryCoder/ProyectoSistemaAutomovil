@@ -2,6 +2,8 @@ Notas..
 
 estructura de proyecto
 
+vista 1.
+
 ----------------------------------------------------------------
 SISTEMA GESTION AUTOMOVILES | Universidad Tecnologica de Tijuana
 ----------------------------------------------------------------
@@ -13,3 +15,15 @@ MENU OPCIONES|DIGITE OPCION NUMERICA
 3. opcion1
 4. opcion1
 5. opcion1
+----------------------------------------------------------------
+->
+
+
+-encabezado propuesta ->
+
+----------------------------------------------------------------
+SISTEMA GESTION AUTOMOVILES | Universidad Tecnologica de Tijuana
+----------------------------------------------------------------
+SUBTITULO
+----------------------------------------------------------------
+lorem impsum
