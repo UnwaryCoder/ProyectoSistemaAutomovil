@@ -10,20 +10,51 @@ SISTEMA GESTION AUTOMOVILES | Universidad Tecnologica de Tijuana
 PROGRAMA DE GESTION DE AGENCIA DE AUTOMOVILES Version 1.0
 ----------------------------------------------------------------
 MENU OPCIONES|DIGITE OPCION NUMERICA
-1. opcion1
-2. opcion1
-3. opcion1
-4. opcion1
-5. opcion1
+
+1. CATALOGO DE VEHICULOS.
+2. REALIZAR VENTA DE VEHICULOS.
+3. MANUAL DE USUARIO
+4. CREAR PRESUPUESTO
+5. SALIR DE PROGRAMA
 ----------------------------------------------------------------
 ->
 
 
 -encabezado propuesta ->
 
+ejemplo para opcion de menu principal.
+
 ----------------------------------------------------------------
 SISTEMA GESTION AUTOMOVILES | Universidad Tecnologica de Tijuana
 ----------------------------------------------------------------
-SUBTITULO
+1. CATALOGO DE VEHICULOS | NOSE QUE TEXTO PONER AQUI
 ----------------------------------------------------------------
-lorem impsum
+CATEGORIAS DE GAMA | SELECCIONE OPCION NUMERICA
+
+1. VEHICULOS GAMA ALTA
+2. VEHICULOS GAMA MEDIA
+3. VEHICULOS GAMA BAJA
+----------------------------------------------------------------
+->
+
+----------------------------------------------------------------
+SISTEMA GESTION AUTOMOVILES | Universidad Tecnologica de Tijuana
+----------------------------------------------------------------
+1.1 CATALOGO DE VEHICULOS | 
+----------------------------------------------------------------
+CATEGORIAS DE GAMA | SELECCIONE OPCION NUMERICA
+
+
+----------------------------------------------------------------
+->
+
+----------------------------------------------------------------
+SISTEMA GESTION AUTOMOVILES | Universidad Tecnologica de Tijuana
+----------------------------------------------------------------
+1.1 FACTURA | 
+----------------------------------------------------------------
+CATEGORIAS DE GAMA | SELECCIONE OPCION NUMERICA
+
+
+----------------------------------------------------------------
+->
