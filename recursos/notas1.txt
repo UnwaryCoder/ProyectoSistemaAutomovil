@@ -40,7 +40,7 @@ CATEGORIAS DE GAMA | SELECCIONE OPCION NUMERICA
 ----------------------------------------------------------------
 SISTEMA GESTION AUTOMOVILES | Universidad Tecnologica de Tijuana
 ----------------------------------------------------------------
-1.1 CATALOGO DE VEHICULOS | 
+1.1 CATALOGO DE VEHICULOS |
 ----------------------------------------------------------------
 CATEGORIAS DE GAMA | SELECCIONE OPCION NUMERICA
 
