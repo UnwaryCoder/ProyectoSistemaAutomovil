@@ -3,7 +3,7 @@ import java.util.Scanner;
 public class App {
     public static void main(String[] args) throws Exception {
         String[] opcionesMenu = {"CATALOGO DE VEHICULOS.", "REALIZAR VENTA DE VEHICULOS.", "MANUAL DE USUARIO", "CREAR PRESUPUESTO", "SALIR"}; int opcionUsuario = 0; Scanner input = new Scanner(System.in); //definir variables y scanner
-        String[][] vehiculos = {
+        String[][] listaVehiculos = {
             {"Toyota", "Corolla", "Media", "Carro Sencillo", "4"},
             {"Ford", "F-150", "Alta", "Camioneta", "6"},
             {"Nissan", "March", "Baja", "Carro Sencillo", "4"},
@@ -35,6 +35,8 @@ public class App {
             {"Volkswagen", "Tiguan", "Media", "SUV Compacto", "4"},
             {"Kia", "Rio", "Baja", "Carro Sencillo", "4"}
         };
+        String[] opcionesDeGama = {"VEHICULOS GAMA ALTA", "VEHICULOS GAMA MEDIA", "VEHICULOS GAMA BAJA"};
+        int opcionMenu1 = 0;
 
         //*visual para terminal
         System.out.println("----------------------------------------------------------------");
@@ -53,19 +55,27 @@ public class App {
 
         switch(opcionUsuario){
             case 1:
-            String[][] opciones = {
-                {"1", "VEHICULOS GAMA ALTA"},
-                {"2", "VEHICULOS GAMA MEDIA"},
-                {"3", "VEHICULOS GAMA BAJA"}
-            };
+                //? Catalogo de autos -> tipos de gama -> Cilindraje -> tipoDeVehiculo
+                System.out.println("----------------------------------------------------------------");
+                System.out.println("SISTEMA GESTION AUTOMOVILES | Universidad Tecnologica de Tijuana");
+                System.out.println("----------------------------------------------------------------");
+                System.out.println("1. CATALOGO DE VEHICULOS | DIGITE OPCION NUMERICA");
+                System.out.println("----------------------------------------------------------------");
 
+                for(int i = 0; i<opcionesDeGama.length; i++){
+                    System.out.println((i + 1) + " -> " + opcionesDeGama[i]);
+                }
+                System.out.println("----------------------------------------------------------------");
+                System.out.print("->"); opcionMenu1 = input.nextInt();
 
-            System.out.println("----------------------------------------------------------------");
-            System.out.println("SISTEMA GESTION AUTOMOVILES | Universidad Tecnologica de Tijuana");
-            System.out.println("----------------------------------------------------------------");
-            System.out.println("1. CATALOGO DE VEHICULOS | DIGITE OPCION NUMERICA");
-            System.out.println("----------------------------------------------------------------");
-            break;
+                switch(opcionMenu1){ //?desplegamos las opciones de gamas(baja, media, alta)
+                    case 1: break;
+                    case 2: break;
+                    case 3: break;
+                    default: break;
+                }
+
+                break;
         } //switch para todos los posibles casos
 
 
