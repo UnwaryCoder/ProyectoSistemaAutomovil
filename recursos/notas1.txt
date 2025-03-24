@@ -34,6 +34,20 @@ CATEGORIAS DE GAMA | SELECCIONE OPCION NUMERICA
 1. VEHICULOS GAMA ALTA
 2. VEHICULOS GAMA MEDIA
 3. VEHICULOS GAMA BAJA
+4. REGRESAR
+----------------------------------------------------------------
+->
+
+----------------------------------------------------------------
+SISTEMA GESTION AUTOMOVILES | Universidad Tecnologica de Tijuana
+----------------------------------------------------------------
+1. CATALOGO DE VEHICULOS | SELECCIONE OPCION NUMERICA
+----------------------------------------------------------------
+FILTRADO DE VEHICULOS GAMA BAJA| SELECCIONE OPCION NUMERICA
+
+1. MOSTRAR POR TIPO DE VEHICULO
+2. MOSTRAR POR CILINDRAJE
+3. REGRESAR
 ----------------------------------------------------------------
 ->
 
@@ -42,7 +56,10 @@ SISTEMA GESTION AUTOMOVILES | Universidad Tecnologica de Tijuana
 ----------------------------------------------------------------
 1.1 CATALOGO DE VEHICULOS |
 ----------------------------------------------------------------
-CATEGORIAS DE GAMA | SELECCIONE OPCION NUMERICA
+(numeroDeVehiculosGama) vehiculos de gama (baja, media, alta)
+ejemplo:
+----------------------------------------------------------------
+10 vehiculos de gama baja
 
 
 ----------------------------------------------------------------
