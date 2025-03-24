@@ -4,7 +4,7 @@
 
 Bienvenido al Proyecto de Sistema de Gestión para Agencia Automovilista desarrollado en Java. Este proyecto fue creado como parte de un trabajo académico en la Universidad Tecnológica de Tijuana. Proporciona una estructura clara y eficiente para gestionar agencias automovilistas
 
-##Cómo descargar y ejecutar el proyecto (Sin GIT)
+## Cómo descargar y ejecutar el proyecto (Sin GIT)
 1 -> Descargar la carpeta:
 -Haz clic en el botón verde Code.
 -Selecciona Download ZIP.
