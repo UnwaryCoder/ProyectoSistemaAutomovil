@@ -2,6 +2,9 @@ import java.util.Scanner;
 
 public class App {
     public static void main(String[] args) throws Exception {
+        new ProcessBuilder("cmd", "/c", "cls").inheritIO().start().waitFor();
+
+        //definir variables, vectores, matriz principal que contiene todos los vehiculos.
         String[] opcionesMenu = {"CATALOGO DE VEHICULOS.", "REALIZAR VENTA DE VEHICULOS.", "MANUAL DE USUARIO", "CREAR PRESUPUESTO", "SALIR"}; int opcionUsuario = 0; Scanner input = new Scanner(System.in); //definir variables y scanner
         String[][] listaVehiculos = {
             {"Toyota", "Corolla", "Media", "Carro Sencillo", "4"},
@@ -35,27 +38,31 @@ public class App {
             {"Volkswagen", "Tiguan", "Media", "SUV Compacto", "4"},
             {"Kia", "Rio", "Baja", "Carro Sencillo", "4"}
         };
-        String[] opcionesDeGama = {"VEHICULOS GAMA ALTA", "VEHICULOS GAMA MEDIA", "VEHICULOS GAMA BAJA"};
-        int opcionMenu1 = 0;
+        String[] opcionesDeGama = {"VEHICULOS GAMA ALTA", "VEHICULOS GAMA MEDIA", "VEHICULOS GAMA BAJA", "MOSTRAR TODOS LOS VEHICULOS", "REGRESAR"};
+        String[] opcionesGamaAlta = {"MOSTRAR TODOS LOS VEHICULOS DE GAMA ALTA", "MOSTRAR POR TIPO DE VEHICULOS", "MOSTRAR POR CANTIDAD DE CILINDROS", "REGRESAR"};
+        int opcionMenu1 = 0, opcionMenuGamaAlta = 0;
 
-        //*visual para terminal
+        //*texto con aspecto visual para terminal
         System.out.println("----------------------------------------------------------------");
         System.out.println("SISTEMA GESTION AUTOMOVILES | Universidad Tecnologica de Tijuana");
         System.out.println("----------------------------------------------------------------");
         System.out.println("MENU OPCIONES|DIGITE OPCION NUMERICA");
         System.out.println("----------------------------------------------------------------");
 
+        //?imprimir el vector con las opciones del menu principal
         for(int i = 0; i <opcionesMenu.length; i++){
             System.out.println((i+1) + " -> " + opcionesMenu[i]);
         }
 
         System.out.println("----------------------------------------------------------------");
         System.out.print("->"); opcionUsuario = input.nextInt();
-        System.out.println();
 
+        //!switch del menu principal
         switch(opcionUsuario){
             case 1:
                 //? Catalogo de autos -> tipos de gama -> Cilindraje -> tipoDeVehiculo
+                new ProcessBuilder("cmd", "/c", "cls").inheritIO().start().waitFor();
+
                 System.out.println("----------------------------------------------------------------");
                 System.out.println("SISTEMA GESTION AUTOMOVILES | Universidad Tecnologica de Tijuana");
                 System.out.println("----------------------------------------------------------------");
@@ -68,10 +75,33 @@ public class App {
                 System.out.println("----------------------------------------------------------------");
                 System.out.print("->"); opcionMenu1 = input.nextInt();
 
+                //?submenu de catalogo
                 switch(opcionMenu1){ //?desplegamos las opciones de gamas(baja, media, alta)
-                    case 1: break;
+                    case 1:
+
+                        System.out.println("----------------------------------------------------------------");
+                        System.out.println("SISTEMA GESTION AUTOMOVILES | Universidad Tecnologica de Tijuana");
+                        System.out.println("----------------------------------------------------------------");
+                        System.out.println("1. MENU CATALOGO GAMA ALTA | DIGITE OPCION NUMERICA");
+                        System.out.println("----------------------------------------------------------------");
+
+                        for(int i = 0; i<opcionesGamaAlta.length; i++){
+                            System.out.println((i+1) + " -> " + opcionesGamaAlta[i]);
+                        }
+                        System.out.println("----------------------------------------------------------------");
+                        System.out.println("->"); opcionMenuGamaAlta = input.nextInt();
+
+                        switch(opcionMenuGamaAlta){
+                            case 1: break;
+                            case 2: break;
+                            case 3: break;
+                            case 4: break;
+                            default: break;
+                        }
+                        break;
                     case 2: break;
                     case 3: break;
+                    case 4: break;
                     default: break;
                 }
 

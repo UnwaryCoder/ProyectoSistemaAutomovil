@@ -34,6 +34,7 @@ CATEGORIAS DE GAMA | SELECCIONE OPCION NUMERICA
 1. VEHICULOS GAMA ALTA
 2. VEHICULOS GAMA MEDIA
 3. VEHICULOS GAMA BAJA
+4. MOSTRAR TODOS LOS VEHICULOS
 4. REGRESAR
 ----------------------------------------------------------------
 ->
@@ -43,11 +44,12 @@ SISTEMA GESTION AUTOMOVILES | Universidad Tecnologica de Tijuana
 ----------------------------------------------------------------
 1. CATALOGO DE VEHICULOS | SELECCIONE OPCION NUMERICA
 ----------------------------------------------------------------
-FILTRADO DE VEHICULOS GAMA BAJA| SELECCIONE OPCION NUMERICA
+FILTRADO DE VEHICULOS GAMA ALTA| SELECCIONE OPCION NUMERICA
 
-1. MOSTRAR POR TIPO DE VEHICULO
-2. MOSTRAR POR CILINDRAJE
-3. REGRESAR
+1. MOSTRAR TODOS LOS VEHICULOS DE GAMA ALTA.
+2. MOSTRAR POR TIPOS DE VEHICULOS
+3. MOSTRAR POR TIPO DE CILINDROS
+4. REGRESAR
 ----------------------------------------------------------------
 ->
 
@@ -78,7 +80,7 @@ CATEGORIAS DE GAMA | SELECCIONE OPCION NUMERICA
 
 matriz
 ¡Por supuesto! Aquí tienes una matriz ampliada con 30 filas, manteniendo las mismas columnas y el formato ajustado. Espero que sea útil para tus necesidades:
-
++--------------------------------------------------------------------------------+
 | Nombre         | Modelo          | Gama      | TipoVehiculo       | Cilindraje |
 |----------------|-----------------|-----------|--------------------|------------|
 | Toyota         | Corolla         | Media     | Carro Sencillo     | 4          |
