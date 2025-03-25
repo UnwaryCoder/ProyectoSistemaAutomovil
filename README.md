@@ -1,18 +1,18 @@
-## Getting Started
+## Proyecto Sistema Gestion Agencia Automovilista. | Universidad Tecnologica de Tijuana
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+## Introduccion
 
-## Folder Structure
+Bienvenido al Proyecto de Sistema de Gestión para Agencia Automovilista desarrollado en Java. Este proyecto fue creado como parte de un trabajo académico en la Universidad Tecnológica de Tijuana. Proporciona una estructura clara y eficiente para gestionar agencias automovilistas
 
-The workspace contains two folders by default, where:
+## Cómo descargar y ejecutar el proyecto (Sin GIT)
+1 -> Descargar la carpeta:
+-Haz clic en el botón verde Code.
+-Selecciona Download ZIP.
+-Extrae el contenido del archivo ZIP en una carpeta de tu elección.
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
+2 -> Descargar la carpeta:
+-Abre un editor de texto como Visual Studio Code.
+-En el menú, selecciona File > Open Folder.
+-Navega a la carpeta donde extraíste el archivo ZIP y selecciona la carpeta del proyecto.
 
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
-
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
-
-## Dependency Management
-
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+Asegúrate de tener instalado el JDK y, en caso de usar VS Code, la extensión "Java Extension Pack".
