@@ -1,8 +1,8 @@
 Notas..
 
 estructura de proyecto
-
-vista 1.
+-------------------------------------------------------------------------------------------
+//vista MENU PRINCIPAL
 
 ----------------------------------------------------------------
 SISTEMA GESTION AUTOMOVILES | Universidad Tecnologica de Tijuana
@@ -18,12 +18,9 @@ MENU OPCIONES|DIGITE OPCION NUMERICA
 5. SALIR DE PROGRAMA
 ----------------------------------------------------------------
 ->
+-----------------------------------------------------------------------------------------------------
 
-
--encabezado propuesta ->
-
-ejemplo para opcion de menu principal.
-
+//VISTA DE MENU 1 - CATALOGO DE VEHICULOS
 ----------------------------------------------------------------
 SISTEMA GESTION AUTOMOVILES | Universidad Tecnologica de Tijuana
 ----------------------------------------------------------------
@@ -38,13 +35,18 @@ CATEGORIAS DE GAMA | SELECCIONE OPCION NUMERICA
 4. REGRESAR
 ----------------------------------------------------------------
 ->
+---------------------------------------------------------------------------------------------------------
+
+
+//VISTA PARA LAS 3 GAMAS, GAMA ALTA, GAMA MEDIA, GAMA BAJA - SE REPLICARA 3 VECES LAS MISMAS VISTAS DE A CONTINUACION---------------------
+1.
 
 ----------------------------------------------------------------
 SISTEMA GESTION AUTOMOVILES | Universidad Tecnologica de Tijuana
 ----------------------------------------------------------------
 1. CATALOGO DE VEHICULOS | SELECCIONE OPCION NUMERICA
 ----------------------------------------------------------------
-FILTRADO DE VEHICULOS GAMA ALTA| SELECCIONE OPCION NUMERICA
+FILTRADO DE VEHICULOS GAMA ALTA-BAJA| SELECCIONE OPCION NUMERICA
 
 1. MOSTRAR TODOS LOS VEHICULOS DE GAMA ALTA.
 2. MOSTRAR POR TIPOS DE VEHICULOS
@@ -53,31 +55,66 @@ FILTRADO DE VEHICULOS GAMA ALTA| SELECCIONE OPCION NUMERICA
 ----------------------------------------------------------------
 ->
 
+2.
 ----------------------------------------------------------------
 SISTEMA GESTION AUTOMOVILES | Universidad Tecnologica de Tijuana
 ----------------------------------------------------------------
-1.1 CATALOGO DE VEHICULOS |
+1.1 TODOS LOS VEHICULOS DE GAMA ALTA
 ----------------------------------------------------------------
 (numeroDeVehiculosGama) vehiculos de gama (baja, media, alta)
 ejemplo:
 ----------------------------------------------------------------
 10 vehiculos de gama baja
 
+//ciclo for para imprimir todos los vehiculos en base a una condicion = Si listaVehiculos[i][2].equals("Alta")) entonces
+dentro del ciclo columnas, imprimir todo, dentro de la condicion anterior. 2 = columna Gama, .equals es una funcion
+//para igualar un String con otro, es decir comprar si "Hola" == "Hola", pero no es tan simple como eso, por eso usamos
+ //la funcion String palabra = "Hola";
+//if(palabra.equals("Hola")){ System.out.println(palabra); } -> el resultado sera "Hola".
 
+presione enter para regresar al menu principal...
 ----------------------------------------------------------------
 ->
 
+3.
 ----------------------------------------------------------------
 SISTEMA GESTION AUTOMOVILES | Universidad Tecnologica de Tijuana
 ----------------------------------------------------------------
-1.1 FACTURA |
+1.1 FILTRADO POR TIPOS DE VEHICULOS |
 ----------------------------------------------------------------
-CATEGORIAS DE GAMA | SELECCIONE OPCION NUMERICA
+MOSTRAR VEHICULOS POR ORDEN DE VEHICULOS.
 
+
+PRESIONE ENTER PARA REGRESAR AL MENU PRINCIPAL...
+----------------------------------------------------------------
+->
+
+4.
+----------------------------------------------------------------
+SISTEMA GESTION AUTOMOVILES | Universidad Tecnologica de Tijuana
+----------------------------------------------------------------
+1.1 FILTRAR POR CILINDRAJE |
+----------------------------------------------------------------
+MOSTRAR VEHICULOS POR ORDEN DE CILINDRAJE.
+
+
+PRESIONE ENTER PARA REGRESAR AL MENU PRINCIPAL...
+----------------------------------------------------------------
+->
+
+5.
+----------------------------------------------------------------
+SISTEMA GESTION AUTOMOVILES | Universidad Tecnologica de Tijuana
+----------------------------------------------------------------
+1.1 VOLVER AL MENU ANTERIOR |
+----------------------------------------------------------------
+
+PRESIONE ENTER PARA REGRESAR AL MENU ANTERIOR...
 
 ----------------------------------------------------------------
 ->
 
+----------------------------------------------------------------------------------------------------------------------------------
 matriz
 ¡Por supuesto! Aquí tienes una matriz ampliada con 30 filas, manteniendo las mismas columnas y el formato ajustado. Espero que sea útil para tus necesidades:
 +--------------------------------------------------------------------------------+

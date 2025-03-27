@@ -72,6 +72,7 @@ public class App {
                 for(int i = 0; i<opcionesDeGama.length; i++){
                     System.out.println((i + 1) + " -> " + opcionesDeGama[i]);
                 }
+
                 System.out.println("----------------------------------------------------------------");
                 System.out.print("->"); opcionMenu1 = input.nextInt();
 
@@ -79,6 +80,7 @@ public class App {
                 switch(opcionMenu1){ //?desplegamos las opciones de gamas(baja, media, alta)
                     case 1:
 
+                        new ProcessBuilder("cmd", "/c", "cls").inheritIO().start().waitFor();
                         System.out.println("----------------------------------------------------------------");
                         System.out.println("SISTEMA GESTION AUTOMOVILES | Universidad Tecnologica de Tijuana");
                         System.out.println("----------------------------------------------------------------");
@@ -88,11 +90,36 @@ public class App {
                         for(int i = 0; i<opcionesGamaAlta.length; i++){
                             System.out.println((i+1) + " -> " + opcionesGamaAlta[i]);
                         }
+
                         System.out.println("----------------------------------------------------------------");
                         System.out.println("->"); opcionMenuGamaAlta = input.nextInt();
 
                         switch(opcionMenuGamaAlta){
-                            case 1: break;
+                            case 1:
+                                //mostrar todos los vehiculos de gama alta...
+                                new ProcessBuilder("cmd", "/c", "cls").inheritIO().start().waitFor();
+
+                                System.out.println("----------------------------------------------------------------");
+                                System.out.println("SISTEMA GESTION AUTOMOVILES | Universidad Tecnologica de Tijuana");
+                                System.out.println("----------------------------------------------------------------");
+                                System.out.println("MOSTRANDO VEHICULOS GAMA ALTA ");
+                                System.out.println("----------------------------------------------------------------");
+
+                                //imprimir todos los vehiculos gama alta...
+                                for(int i = 0; i < listaVehiculos.length; i++){
+
+                                    if(listaVehiculos[i][2].equals("Alta")){
+
+                                        for(int j = 0; j < listaVehiculos[i].length; j++){
+
+                                            System.out.print(listaVehiculos[i][j] + " | ");
+                                        }
+
+                                        System.out.println();
+                                    }
+                                }
+                                break;
+
                             case 2: break;
                             case 3: break;
                             case 4: break;
