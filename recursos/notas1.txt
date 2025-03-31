@@ -14,13 +14,12 @@ MENU OPCIONES|DIGITE OPCION NUMERICA
 1. CATALOGO DE VEHICULOS.
 2. REALIZAR VENTA DE VEHICULOS.
 3. MANUAL DE USUARIO
-4. CREAR PRESUPUESTO
-5. SALIR DE PROGRAMA
+4. SALIR DE PROGRAMA
 ----------------------------------------------------------------
 ->
 -----------------------------------------------------------------------------------------------------
 
-//VISTA DE MENU 1 - CATALOGO DE VEHICULOS
+//VISTA DE MENU 0 - CATALOGO DE VEHICULOS
 ----------------------------------------------------------------
 SISTEMA GESTION AUTOMOVILES | Universidad Tecnologica de Tijuana
 ----------------------------------------------------------------
@@ -28,11 +27,11 @@ SISTEMA GESTION AUTOMOVILES | Universidad Tecnologica de Tijuana
 ----------------------------------------------------------------
 CATEGORIAS DE GAMA | SELECCIONE OPCION NUMERICA
 
-1. VEHICULOS GAMA ALTA
-2. VEHICULOS GAMA MEDIA
-3. VEHICULOS GAMA BAJA
+1. MOSTRAR VEHICULOS POR GAMA
+2. MOSTRAR VEHICULOS POR CATEGORIA
+3. MOSTRAR VEHICULOS POR CILINDRAJE
 4. MOSTRAR TODOS LOS VEHICULOS
-4. REGRESAR
+5. REGRESAR
 ----------------------------------------------------------------
 ->
 ---------------------------------------------------------------------------------------------------------
@@ -48,71 +47,176 @@ SISTEMA GESTION AUTOMOVILES | Universidad Tecnologica de Tijuana
 ----------------------------------------------------------------
 FILTRADO DE VEHICULOS GAMA ALTA-BAJA| SELECCIONE OPCION NUMERICA
 
-1. MOSTRAR TODOS LOS VEHICULOS DE GAMA ALTA.
-2. MOSTRAR POR TIPOS DE VEHICULOS
-3. MOSTRAR POR TIPO DE CILINDROS
+1. MOSTRAR TODOS LOS VEHICULOS DE GAMA ALTA
+2. MOSTRAR TODOS LOS VEHICULOS DE GAMA MEDIA
+3. MOSTRAR TODOS LOS VEHICULOS DE GAMA BAJA
 4. REGRESAR
 ----------------------------------------------------------------
 ->
 
-2.
+1.1. gama alta
+-----------------------------------------------------------------------------------------------------
+SISTEMA GESTION AUTOMOVILES | Universidad Tecnologica de Tijuana
+-----------------------------------------------------------------------------------------------------
+TODOS LOS VEHICULOS DE GAMA ALTA-MEDIA-BAJA | idk
+-----------------------------------------------------------------------------------------------------
+| ID  | Marca            | Modelo           | Gama    | Tipo                | Cilindraje/Tipo Motor |
+|---------------------------------------------------------------------------------------------------|
+| 1   | Ford             | F-150            | Alta    | Camioneta           | 6                     |
+| 2   | Chevrolet        | Silverado        | Alta    | Camioneta           | 8                     |
+| 3   | Jeep             | Wrangler         | Alta    | SUV                 | 6                     |
+| 4   | Dodge            | Charger          | Alta    | Carro Deportivo     | 6                     |
+| 5   | BMW              | Serie 3          | Alta    | Carro Deportivo     | 4                     |
+| 6   | Audi             | Q5               | Alta    | SUV                 | 4                     |
+| 7   | Mercedes-Benz    | Clase C          | Alta    | Carro Deportivo     | 4                     |
+| 8   | Tesla            | Model Y          | Alta    | SUV                 | Eléctrico             |
+| 9   | GMC              | Sierra           | Alta    | Camioneta           | 8                     |
+| 10  | Ram              | 1500             | Alta    | Camioneta           | 8                     |
+| 11  | Toyota           | Hilux            | Alta    | Camioneta           | 6                     |
+| 12  | Jeep             | Grand Cherokee   | Alta    | SUV                 | 6                     |
+-----------------------------------------------------------------------------------------------------
+
+PRESIONE ENTER PARA VOLVER AL MENU ANTERIOR...
+-----------------------------------------------------------------------------------------------------
+->
+
+1.1.2 gama media
+-----------------------------------------------------------------------------------------------------
+SISTEMA GESTION AUTOMOVILES | Universidad Tecnologica de Tijuana
+-----------------------------------------------------------------------------------------------------
+TODOS LOS VEHICULOS DE GAMA ALTA-MEDIA-BAJA | idk
+------------------------------------------------------------------------------------------------------
+| ID  | Marca            | Modelo           | Gama    | Tipo                | Cilindraje/Tipo Motor  |
+|----------------------------------------------------------------------------------------------------|
+| 1   | Toyota           | Corolla          | Media   | Carro Sencillo       | 4                     |
+| 2   | Hyundai          | Elantra          | Media   | Carro Sencillo       | 4                     |
+| 3   | Honda            | CR-V             | Media   | SUV                  | 4                     |
+| 4   | Subaru           | Outback          | Media   | SUV                  | 4                     |
+| 5   | Volkswagen       | Jetta            | Media   | Carro Sencillo       | 4                     |
+| 6   | Kia              | Sportage         | Media   | SUV                  | 4                     |
+| 7   | Fiat             | 500X             | Media   | SUV Compacto         | 4                     |
+| 8   | Mazda            | CX-5             | Media   | SUV                  | 4                     |
+| 9   | Nissan           | Frontier         | Media   | Camioneta            | 4                     |
+| 10  | Hyundai          | Tucson           | Media   | SUV Compacto         | 4                     |
+| 11  | Volkswagen       | Tiguan           | Media   | SUV Compacto         | 4                     |
+| 12  | Honda            | Civic            | Media   | Carro Sencillo       | 4                     |
+-----------------------------------------------------------------------------------------------------|
+
+PRESIONE ENTER PARA VOLVER AL MENU ANTERIOR...
+-----------------------------------------------------------------------------------------------------
+->
+
+1.1.3 gama baja
+-----------------------------------------------------------------------------------------------------
+SISTEMA GESTION AUTOMOVILES | Universidad Tecnologica de Tijuana
+-----------------------------------------------------------------------------------------------------
+TODOS LOS VEHICULOS DE GAMA ALTA-MEDIA-BAJA | idk
+-----------------------------------------------------------------------------------------------------
+| ID  | Marca            | Modelo           | Gama    | Tipo                | Cilindraje/Tipo Motor |
+-----------------------------------------------------------------------------------------------------
+| 1   | Nissan           | March            | Baja    | Carro Sencillo       | 4                     |
+| 2   | Mitsubishi       | Mirage           | Baja    | Carro Sencillo       | 3                     |
+| 3   | Ford             | EcoSport         | Baja    | SUV Compacto         | 4                     |
+| 4   | Suzuki           | Vitara           | Baja    | SUV Compacto         | 4                     |
+| 5   | Chevrolet        | Spark            | Baja    | Carro Sencillo       | 4                     |
+| 6   | Kia              | Rio              | Baja    | Carro Sencillo       | 4                     |
+-----------------------------------------------------------------------------------------------------|
+
+PRESIONE ENTER PARA VOLVER AL MENU ANTERIOR...
+-----------------------------------------------------------------------------------------------------
+->
+
+
+2. POR CATEGORIA, VENTANAS CONSECUENTES
+--------------------------------------------------------------------
+SISTEMA GESTION AUTOMOVILES | Universidad Tecnologica de Tijuana
+--------------------------------------------------------------------
+1.1 FILTRADO POR CATEGORIA DE VEHICULOS | SELECCIONE OPCION NUMERICA
+--------------------------------------------------------------------
+1. SEDAN
+2. DEPORTIVO
+3. PICK UP
+4. SUV
+5. REGRESAR
+--------------------------------------------------------------------
+->
+
+2.1 POR CADA TIPO DE AUTO(SEDAN, DEPORTIVO, PICK UP, ETC...)
 ----------------------------------------------------------------
 SISTEMA GESTION AUTOMOVILES | Universidad Tecnologica de Tijuana
 ----------------------------------------------------------------
-1.1 TODOS LOS VEHICULOS DE GAMA ALTA
+1.1 FILTRADO POR CATEGORIA DE VEHICULOS | SELECCIONE OPCION NUMERICA
 ----------------------------------------------------------------
-(numeroDeVehiculosGama) vehiculos de gama (baja, media, alta)
-ejemplo:
-----------------------------------------------------------------
-10 vehiculos de gama baja
+CICLO PARA CADA TIPO DE AUTO CON FORMATO DE tabla
 
-//ciclo for para imprimir todos los vehiculos en base a una condicion = Si listaVehiculos[i][2].equals("Alta")) entonces
-dentro del ciclo columnas, imprimir todo, dentro de la condicion anterior. 2 = columna Gama, .equals es una funcion
-//para igualar un String con otro, es decir comprar si "Hola" == "Hola", pero no es tan simple como eso, por eso usamos
- //la funcion String palabra = "Hola";
-//if(palabra.equals("Hola")){ System.out.println(palabra); } -> el resultado sera "Hola".
-
-presione enter para regresar al menu principal...
+PRESIONE ENTER PARA CONTINUAR...(DIRECCIONA AL MENU PRINCIPAL..?)
 ----------------------------------------------------------------
 ->
 
-3.
+
+2.2 REGRESAR(VOLVER AL MENU ANTERIOR...)
 ----------------------------------------------------------------
 SISTEMA GESTION AUTOMOVILES | Universidad Tecnologica de Tijuana
 ----------------------------------------------------------------
-1.1 FILTRADO POR TIPOS DE VEHICULOS |
+1.1 REGRESAR AL MENU ANTERIOR | SEPA LA BOLA QUE PONER AQUI
 ----------------------------------------------------------------
-MOSTRAR VEHICULOS POR ORDEN DE VEHICULOS.
 
-
-PRESIONE ENTER PARA REGRESAR AL MENU PRINCIPAL...
+PRESIONE ENTER PARA CONTINUAR...
 ----------------------------------------------------------------
 ->
 
-4.
+3 POR CILINDRAJE
 ----------------------------------------------------------------
 SISTEMA GESTION AUTOMOVILES | Universidad Tecnologica de Tijuana
 ----------------------------------------------------------------
-1.1 FILTRAR POR CILINDRAJE |
+1.1 FILTRAR POR CILINDRAJE | SELECCIONE OPCION NUMERICA
 ----------------------------------------------------------------
-MOSTRAR VEHICULOS POR ORDEN DE CILINDRAJE.
-
-
-PRESIONE ENTER PARA REGRESAR AL MENU PRINCIPAL...
+1. 4 CILINDROS
+2. 6 CILINDROS
+3. 8 CILINDROS
+4. REGRESAR
 ----------------------------------------------------------------
 ->
 
-5.
+3.1 VISTA PARA LAS 3 OPCIONES DE CILINDRAJE
 ----------------------------------------------------------------
 SISTEMA GESTION AUTOMOVILES | Universidad Tecnologica de Tijuana
 ----------------------------------------------------------------
-1.1 VOLVER AL MENU ANTERIOR |
+1.1 FILTRADO POR N CILINDROS | PRESIONE ENTER PARA CONTINUAR
 ----------------------------------------------------------------
+CICLO PARA MOSTRAR LOS VEHICULOS DE N CANTIDAD DE CILINDROS EN
+FORMATO DE TABLA TEXTO.
 
 PRESIONE ENTER PARA REGRESAR AL MENU ANTERIOR...
-
 ----------------------------------------------------------------
 ->
+
+3.2 REGRESAR(REGRESAR AL MENU ANTERIOR...)
+----------------------------------------------------------------
+SISTEMA GESTION AUTOMOVILES | Universidad Tecnologica de Tijuana
+----------------------------------------------------------------
+1.1 REGRESAR AL MENU ANTERIOR | SEPA LA BOLA QUE PONER AQUI
+----------------------------------------------------------------
+
+PRESIONE ENTER PARA CONTINUAR...
+----------------------------------------------------------------
+->
+
+
+4. MOSTRAR TODOS LOS VEHICULOS DEL CATALOGO
+----------------------------------------------------------------
+SISTEMA GESTION AUTOMOVILES | Universidad Tecnologica de Tijuana
+----------------------------------------------------------------
+1.1 LISTA DE VEHICULOS EN CATALOGO | SISTEMA GESTION DE AUTOMOVILES
+----------------------------------------------------------------
+CICLO PARA IMPRIMIR TODA LA MATRIZ EN FORMATO DE TABLA.
+
+PRESIONE ENTER PARA CONTINUAR...
+----------------------------------------------------------------
+->
+
+
+
 
 ----------------------------------------------------------------------------------------------------------------------------------
 matriz
@@ -152,3 +256,37 @@ matriz
 | Kia            | Rio             | Baja      | Carro Sencillo     | 4          |
 
 Espero que esta tabla cumpla con tus expectativas. Si necesitas más filas, otros datos o deseas realizar ajustes, ¡no dudes en pedírmelo! 🚗🌟
+
+-----------------------------------------------------------------------------------------------------
+| ID  | Marca            | Modelo           | Gama    | Tipo                | Cilindraje/Tipo Motor |
+|---------------------------------------------------------------------------------------------------|
+| 1   | Ford             | F-150            | Alta    | Camioneta           | 6                     |
+| 2   | Chevrolet        | Silverado        | Alta    | Camioneta           | 8                     |
+| 3   | Jeep             | Wrangler         | Alta    | SUV                 | 6                     |
+| 4   | Dodge            | Charger          | Alta    | Carro Deportivo     | 6                     |
+| 5   | BMW              | Serie 3          | Alta    | Carro Deportivo     | 4                     |
+| 6   | Audi             | Q5               | Alta    | SUV                 | 4                     |
+| 7   | Mercedes-Benz    | Clase C          | Alta    | Carro Deportivo     | 4                     |
+| 8   | Tesla            | Model Y          | Alta    | SUV                 | Eléctrico             |
+| 9   | GMC              | Sierra           | Alta    | Camioneta           | 8                     |
+| 10  | Ram              | 1500             | Alta    | Camioneta           | 8                     |
+| 11  | Toyota           | Hilux            | Alta    | Camioneta           | 6                     |
+| 12  | Jeep             | Grand Cherokee   | Alta    | SUV                 | 6                     |
+-----------------------------------------------------------------------------------------------------
+
+int contador = 1; // Inicializa el contador de filas
+for (int i = 0; i < listaVehiculos.length; i++) {
+    if (listaVehiculos[i][2].equals("Alta")) {
+
+        // imprimir por secciones, tabulaciones para dar formato de tabla, ver archivo notas1.txt
+        System.out.printf("| %-3d | %-15s | %-15s | %-7s | %-20s | %-20s |\n",
+                          contador,
+                          listaVehiculos[i][0], // Marca
+                          listaVehiculos[i][1], // Modelo
+                          listaVehiculos[i][2], // Gama
+                          listaVehiculos[i][3], // Tipo
+                          listaVehiculos[i][4]); // Cilindraje o Tipo Motor
+        contador++; // Incrementa el número de fila
+
+    }
+}
