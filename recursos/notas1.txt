@@ -309,3 +309,38 @@ for (int i = 0; i < listaVehiculos.length; i++) {
 
     }
 }
+nueva matriz con id y precio
++----+------------------+------------------+--------+------------------+------------+------------+
+| ID | Marca            | Modelo           | Gama   | Tipo             | Cilindraje | Precio     |
++----+------------------+------------------+--------+------------------+------------+------------+
+|  1 | Toyota           | Corolla          | Media  | Carro Sencillo   | 4          | $300,000   |
+|  2 | Ford             | F-150            | Alta   | Camioneta        | 6          | $750,000   |
+|  3 | Nissan           | March            | Baja   | Carro Sencillo   | 4          | $180,000   |
+|  4 | Chevrolet        | Silverado        | Alta   | Camioneta        | 8          | $800,000   |
+|  5 | Hyundai          | Elantra          | Media  | Carro Sencillo   | 4          | $320,000   |
+|  6 | Honda            | CR-V             | Media  | SUV              | 4          | $450,000   |
+|  7 | Jeep             | Wrangler         | Alta   | SUV              | 6          | $900,000   |
+|  8 | Subaru           | Outback          | Media  | SUV              | 4          | $400,000   |
+|  9 | Volkswagen       | Jetta            | Media  | Carro Sencillo   | 4          | $310,000   |
+| 10 | Dodge            | Charger          | Alta   | Carro Deportivo  | 6          | $1,200,000 |
+| 11 | BMW              | Serie 3          | Alta   | Carro Deportivo  | 4          | $1,500,000 |
+| 12 | Audi             | Q5               | Alta   | SUV              | 4          | $1,000,000 |
+| 13 | Kia              | Sportage         | Media  | SUV              | 4          | $450,000   |
+| 14 | Mercedes-Benz    | Clase C          | Alta   | Carro Deportivo  | 4          | $1,600,000 |
+| 15 | Tesla            | Model Y          | Alta   | SUV              | Eléctrico  | $1,300,000 |
+| 16 | Mitsubishi       | Mirage           | Baja   | Carro Sencillo   | 3          | $170,000   |
+| 17 | Fiat             | 500X             | Media  | SUV Compacto     | 4          | $350,000   |
+| 18 | GMC              | Sierra           | Alta   | Camioneta        | 8          | $850,000   |
+| 19 | Ram              | 1500             | Alta   | Camioneta        | 8          | $880,000   |
+| 20 | Mazda            | CX-5             | Media  | SUV              | 4          | $420,000   |
+| 21 | Toyota           | Hilux            | Alta   | Camioneta        | 6          | $780,000   |
+| 22 | Ford             | EcoSport         | Baja   | SUV Compacto     | 4          | $230,000   |
+| 23 | Suzuki           | Vitara           | Baja   | SUV Compacto     | 4          | $240,000   |
+| 24 | Chevrolet        | Spark            | Baja   | Carro Sencillo   | 4          | $150,000   |
+| 25 | Honda            | Civic            | Media  | Carro Sencillo   | 4          | $340,000   |
+| 26 | Hyundai          | Tucson           | Media  | SUV Compacto     | 4          | $380,000   |
+| 27 | Nissan           | Frontier         | Media  | Camioneta        | 4          | $470,000   |
+| 28 | Jeep             | Grand Cherokee   | Alta   | SUV              | 6          | $950,000   |
+| 29 | Volkswagen       | Tiguan           | Media  | SUV Compacto     | 4          | $370,000   |
+| 30 | Kia              | Rio              | Baja   | Carro Sencillo   | 4          | $190,000   |
++----+------------------+------------------+--------+------------------+------------+------------+
