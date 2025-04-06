@@ -40,7 +40,7 @@ public class App {
         };
         String[] opcionesMenu1_1 = {"MOSTRAR VEHICULOS POR GAMA", "MOSTRAR VEHICULOS POR CATEGORIA", "MOSTRAR VEHICULOS POR CILINDRAJE", "MOSTRAR TODOS LOS VEHICULOS", "REGRESAR"};
         String[] opcionesMenu1_2 = {"MOSTRAR TODOS LOS VEHICULOS DE GAMA ALTA", "MOSTRAR TODOS LOS VEHICULOS DE GAMA MEDIA", "MOSTRAR TODOS LOS VEHICULOS DE GAMA BAJA", "REGRESAR"};
-        int opcionMenu1_1 = 0, opcionMenuGamas = 0, auxMenuPrincipal = 1, auxMenuGamas = 0;
+        int opcionMenu1_1 = 0, opcionMenuGamas = 0, auxMenuPrincipal = 1, auxMenuGamas = 0, auxMenuGamas2 = 0;
 
         do{ //? do while para el menu principal, se va a repetir hasta que el usuario seleccione la opcion de salir.
             new ProcessBuilder("cmd", "/c", "cls").inheritIO().start().waitFor();
@@ -85,7 +85,7 @@ public class App {
                     System.out.print("->"); opcionMenu1_1 = input.nextInt(); //? leemos la opcion del menu 1.1
 
                     //! switch para menu 1.1 menu catalogo de vehiculos.
-
+                    do{
                     switch(opcionMenu1_1){ //?desplegamos las opciones de catalogo (1.mostrar vehiculos por gama, 2.categoria, 3.cilindraje, 4.todos los vehiculos o 5.regresar)
                         case 1: //? mostrar vehiculos por gama...
 
@@ -93,7 +93,7 @@ public class App {
                             System.out.println("----------------------------------------------------------------");
                             System.out.println("SISTEMA GESTION AUTOMOVILES | Universidad Tecnologica de Tijuana");
                             System.out.println("----------------------------------------------------------------");
-                            System.out.println("1. MENU CATALOGO | DIGITE OPCION NUMERICA");
+                            System.out.println("MENU CATALOGO POR GAMAS | DIGITE OPCION NUMERICA");
                             System.out.println("----------------------------------------------------------------");
 
                             for(int i = 0; i<opcionesMenu1_2.length; i++){
@@ -103,7 +103,7 @@ public class App {
                             System.out.println("----------------------------------------------------------------");
                             System.out.print("->"); opcionMenuGamas = input.nextInt();
 
-                            //! switch para menu 1.2 filtrado por gamas
+                            //! switch para menu 1.2 filtrado por gamas, menu de gamas
                             switch(opcionMenuGamas){
                                 case 1: //? mostrar todos los vehiculos de gama alta...
 
@@ -137,9 +137,11 @@ public class App {
                                     System.out.println("-----------------------------------------------------------------------------------------------------");
                                     System.out.print("->"); // DESPUES IMPLEMENTAR EL DO WHILE PARA QUE AQUI CIERRE...
 
-                                    input.nextLine(); //? limpiar el buffer de entrada, ya que el usuario selecciono una opcion no valida.
-                                    input.nextLine(); //? se lee el enter para continuar, ya que el programa se va a cerrar.
-                                    auxMenuGamas = 1; //? se asigna 0 a la variable para salir del do while, ya que el usuario selecciono la opcion de salir.
+                                    input.nextLine();
+                                    input.nextLine();
+
+                                    auxMenuGamas = 1;
+                                    auxMenuGamas2 = 1;
                                 break;
 
                                 case 2: //? mostrar todos los vehiculos de gama media...
@@ -176,7 +178,9 @@ public class App {
 
                                     input.nextLine(); //? limpiar el buffer de entrada, ya que el usuario selecciono una opcion no valida.
                                     input.nextLine(); //? se lee el enter para continuar, ya que el programa se va a cerrar.
+
                                     auxMenuGamas = 1; //? se asigna 0 a la variable para salir del do while, ya que el usuario selecciono la opcion de salir.
+                                    auxMenuGamas2 = 1;
 
                                 break;
 
@@ -214,10 +218,13 @@ public class App {
 
                                     input.nextLine(); //? limpiar el buffer de entrada, ya que el usuario selecciono una opcion no valida.
                                     input.nextLine(); //? se lee el enter para continuar, ya que el programa se va a cerrar.
+
                                     auxMenuGamas = 1; //? se asigna 0 a la variable para salir del do while, ya que el usuario selecciono la opcion de salir.
+                                    auxMenuGamas2 = 1;
 
                                 break;
-                                case 4: //regresar al menu anterior...
+
+                                case 4: //? regresar al menu anterior -> Menu Catalogo
 
                                     new ProcessBuilder("cmd", "/c", "cls").inheritIO().start().waitFor(); // Limpia la pantalla
 
@@ -230,13 +237,15 @@ public class App {
                                     System.out.println("----------------------------------------------------------------");
                                     System.out.print("->");
 
-                                    input.nextLine(); //? limpiar el buffer de entrada, ya que el usuario selecciono una opcion no valida.
-                                    input.nextLine(); //? se lee el enter para continuar, ya que el programa se va a cerrar.
-                                    auxMenuGamas = 1; //? se asigna 0 a la variable para salir del do while, ya que el usuario selecciono la opcion de salir.
+                                    input.nextLine();
+                                    input.nextLine();
+
+                                    auxMenuGamas = 1;
+                                    auxMenuGamas2 = 0;
 
                                 break;
 
-                                default: //? si el usuario no selecciona una opcion valida, se le indica que la opcion no es correcta.
+                                default: //? default y repetir el menu.
 
                                     new ProcessBuilder("cmd", "/c", "cls").inheritIO().start().waitFor();
 
@@ -249,6 +258,8 @@ public class App {
 
                                     input.nextLine(); //? limpiar el buffer de entrada, ya que el usuario selecciono una opcion no valida.
                                     input.nextLine(); //? se lee el enter para continuar, ya que el programa se va a cerrar.
+
+                                    auxMenuGamas2 = 1;
                                 break;
                             }
 
@@ -282,9 +293,27 @@ public class App {
                             auxMenuGamas = 0; //? se asigna 0 a la variable para salir del do while, ya que el usuario selecciono la opcion de salir.
                         break;
 
-                        default: break;
+                        default: //? si el usuario no selecciona una opcion valida, se le indica que la opcion no es correcta.
+
+                            new ProcessBuilder("cmd", "/c", "cls").inheritIO().start().waitFor();
+
+                            System.out.println("-----------------------------------------------------------------------------------------------------");
+                            System.out.println("SISTEMA GESTION AUTOMOVILES | Universidad Tecnologica de Tijuana");
+                            System.out.println("-----------------------------------------------------------------------------------------------------");
+                            System.out.println("OPCION NO VALIDA, PRESIONE ENTER PARA CONTINUAR"); //1System.out.println();
+                            System.out.println("-----------------------------------------------------------------------------------------------------");
+                            System.out.print("->"); // DESPUES IMPLEMENTAR EL DO WHILE PARA QUE AQUI CIERRE...
+
+                            input.nextLine(); //? limpiar el buffer de entrada, ya que el usuario selecciono una opcion no valida.
+                            input.nextLine(); //? se lee el enter para continuar, ya que el programa se va a cerrar.
+                            auxMenuGamas = 1;
+
+                        break;
                     }
-                break;
+
+                    }while(auxMenuGamas2 != 0); //? ciclo while, mientras auxMenuGamas sea diferente de 0, se va a repetir el ciclo.
+
+                    break;
 
                 case 4: //? salir del programa...
 
