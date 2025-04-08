@@ -42,7 +42,11 @@ public class App {
         String[] opcionesMenu1_2 = {"MOSTRAR TODOS LOS VEHICULOS DE GAMA ALTA", "MOSTRAR TODOS LOS VEHICULOS DE GAMA MEDIA", "MOSTRAR TODOS LOS VEHICULOS DE GAMA BAJA", "REGRESAR"};
         String[] opcionesMenu1_3 = {"SEDAN", "DEPORTIVO", "PICKUP", "SUV", "REGRESAR"};
         String[] opcionesMenu1_4 = {"4 CILINDROS", "6 CILINDROS", "8 CILINDROS", "REGRESAR"};
-        int opcionMenu1_1 = 0, opcionMenuGamas = 0, auxMenuPrincipal = 1, auxMenuGamas = 0, auxMenuGamas2 = 0, opcionMenuCategorias = 0, opcionMenuCilindraje = 0;
+        String[] opcionesMenu2 = {"REALIZAR VENTA DE VEHICULOS", "REALIZAR PRESUPUESTO DE VEHICULOS", "REGRESAR AL MENU ANTERIOR"};
+        String[] opcionesMenu2_1 = {"RELIZAR VENTA DE VEHICULO DE CONTADO", "REALIZAR VENTA DE VEHICULO A CREDITO", "REGRESAR AL MENU ANTERIOR"};
+        int opcionMenu1_1 = 0, opcionMenuGamas = 0, auxMenuPrincipal = 1, auxMenuGamas = 0, auxMenuGamas2 = 0, opcionMenuCategorias = 0, opcionMenuCilindraje = 0, opcionMenuVentas = 0, opcionMenu2_1 = 0, idVehiculo, opcionPago;
+        String nombreCliente = "", contactoCliente = "";
+        double pagoCliente, precioVehiculo, precioConDescuento, cambioCliente;
 
         do{ //? do while para el menu principal, se va a repetir hasta que el usuario seleccione la opcion de salir.
             new ProcessBuilder("cmd", "/c", "cls").inheritIO().start().waitFor();
@@ -61,7 +65,7 @@ public class App {
             }
 
             System.out.println("----------------------------------------------------------------");
-            System.out.print("->"); opcionUsuario = input.nextInt();
+            System.out.print("-> "); opcionUsuario = input.nextInt();
 
             //! switch del menu principal
             do{
@@ -69,8 +73,8 @@ public class App {
             new ProcessBuilder("cmd", "/c", "cls").inheritIO().start().waitFor();
 
             switch(opcionUsuario){
-                case 1:
-                    //? 1. Catalogo de autos -> tipos de gama -> Cilindraje -> tipoDeVehiculo
+                case 1: //? 1. Catalogo de autos -> tipos de gama -> Cilindraje -> tipoDeVehiculo
+
                     new ProcessBuilder("cmd", "/c", "cls").inheritIO().start().waitFor();
 
                     System.out.println("----------------------------------------------------------------");
@@ -84,7 +88,7 @@ public class App {
                     }
 
                     System.out.println("----------------------------------------------------------------");
-                    System.out.print("->"); opcionMenu1_1 = input.nextInt(); //? leemos la opcion del menu 1.1
+                    System.out.print("-> "); opcionMenu1_1 = input.nextInt(); //? leemos la opcion del menu 1.1
 
                     //! switch para menu 1.1 menu catalogo de vehiculos.
                     do{
@@ -728,6 +732,259 @@ public class App {
                     }while(auxMenuGamas2 != 0); //? ciclo while, mientras auxMenuGamas sea diferente de 0, se va a repetir el ciclo.
 
                     break;
+
+                case 2: //? realizar venta de vehiculo, primero haremos la pre ventana, que es conocer la informacion del cliente.
+
+                    new ProcessBuilder("cmd", "/c", "cls").inheritIO().start().waitFor();
+
+                    //? pedimos informacion del cliente para su factura o presupuesto.
+                    System.out.println("----------------------------------------------------------------");
+                    System.out.println("SISTEMA GESTION AUTOMOVILES | Universidad Tecnologica de Tijuana");
+                    System.out.println("----------------------------------------------------------------");
+                    System.out.println("MENU VENTAS | DIGITE INFORMACION DEL CLIENTE");
+                    System.out.println("----------------------------------------------------------------");
+
+                    input.nextLine(); //? limpiar el buffer de entrada, ya que el usuario selecciono una opcion no valida.
+                    System.out.print("NOMBRE COMPLETO           -> ");
+                    nombreCliente = input.nextLine(); //input.nextLine();
+
+                    System.out.print("CONTACTO (NUMERO O EMAIL) -> ");
+                    contactoCliente = input.nextLine();
+
+                    System.out.println("\nINFORMACION GUARDADA | PRESIONE ENTER PARA CONTINUAR...");
+                    System.out.println("----------------------------------------------------------------");
+                    System.out.print("-> "); input.nextLine();
+
+                    //? procedemos a desplegar el menu de ventas
+                    new ProcessBuilder("cmd", "/c", "cls").inheritIO().start().waitFor();
+
+                    System.out.println("----------------------------------------------------------------");
+                    System.out.println("SISTEMA GESTION AUTOMOVILES | Universidad Tecnologica de Tijuana");
+                    System.out.println("----------------------------------------------------------------");
+                    System.out.println("MENU VENTAS | DIGITE OPCION NUMERICA");
+                    System.out.println("----------------------------------------------------------------");
+
+                    for(int i = 0; i<opcionesMenu2.length; i++){
+                        System.out.println((i+1) + " -> " + opcionesMenu2[i]);
+                    }
+
+                    System.out.println("----------------------------------------------------------------");
+                    System.out.print("-> "); opcionMenuVentas = input.nextInt();
+
+                    //! switch de menu ventas.
+                    switch(opcionMenuVentas){
+                            case 1: //? realizar venta de vehiculo...
+                                new ProcessBuilder("cmd", "/c", "cls").inheritIO().start().waitFor();
+
+                                System.out.println("----------------------------------------------------------------");
+                                System.out.println("SISTEMA GESTION AUTOMOVILES | Universidad Tecnologica de Tijuana");
+                                System.out.println("----------------------------------------------------------------");
+                                System.out.println("MENU VENTA VEHICULO | DIGITE OPCION NUMERICA");
+                                System.out.println("----------------------------------------------------------------");
+
+                                for(int i = 0; i<opcionesMenu2_1.length; i++){
+                                    System.out.println((i+1) + " -> " + opcionesMenu2_1[i]);
+                                }
+
+                                System.out.println("----------------------------------------------------------------");
+                                System.out.print("-> "); opcionMenu2_1 = input.nextInt();
+
+                                //! switch para menu 2.1, venta de vehiculo, a pagos o a credito.
+                                switch(opcionMenu2_1){
+                                    case 1: //? venta de contado, se le otorga un descuento de 10 al cliente.
+                                        new ProcessBuilder("cmd", "/c", "cls").inheritIO().start().waitFor();
+
+                                        //? pedimos el ID del vehiculo que se va a vender.
+                                        System.out.println("----------------------------------------------------------------");
+                                        System.out.println("SISTEMA GESTION AUTOMOVILES | Universidad Tecnologica de Tijuana");
+                                        System.out.println("----------------------------------------------------------------");
+                                        System.out.println("MENU VENTA VEHICULO PAGO DE CONTADO | DIGITE ID DE VEHICULO");
+                                        System.out.println("----------------------------------------------------------------");
+                                        System.out.print("-> "); idVehiculo = input.nextInt();
+
+                                        idVehiculo = idVehiculo - 1; //? restamos 1 al ID, ya que el ID empieza en 0.
+
+                                        System.out.println("\nINFORMACION GUARDADA | PRESIONE ENTER PARA CONTINUAR...");
+                                        System.out.println("----------------------------------------------------------------");
+                                        System.out.print("-> "); input.nextLine();
+
+                                        //? teniendo el ID, procesamos a pedir informacion de pago.
+                                        new ProcessBuilder("cmd", "/c", "cls").inheritIO().start().waitFor();
+                                        System.out.println("-----------------------------------------------------------------------------------------------------");
+                                        System.out.println("SISTEMA GESTION AUTOMOVILES | Universidad Tecnologica de Tijuana");
+                                        System.out.println("-----------------------------------------------------------------------------------------------------");
+                                        System.out.println("DETALLES DEL CLIENTE:");
+                                        System.out.println("\nNOMBRE DEL CLIENTE -> " + nombreCliente);
+                                        System.out.println("CONTACTO DEL CLIENTE -> " + contactoCliente);
+                                        System.out.println("-----------------------------------------------------------------------------------------------------");
+
+                                        System.out.println("\nMENU VENTA VEHICULO PAGO DE CONTADO | INFORMACION DEL VEHICULO DE ID = [" + idVehiculo + "]");
+                                        System.out.println("+----+------------------+------------------+--------+------------------+------------+------------+");
+                                        System.out.println("| ID | Marca            | Modelo           | Gama   | Tipo             | Cilindraje | Precio     |");
+                                        System.out.println("+----+------------------+------------------+--------+------------------+------------+------------+");
+
+                                        //? imprimir el vehiculo segun el ID, como solo es un vehiculo, no necesitamos ciclos, porque conocemos el valor de la fila, y las columnas.
+                                        System.out.printf("| %2s | %-16s | %-16s | %-6s | %-16s | %-10s | %-10s |\n",
+                                            listaVehiculos[idVehiculo][0], // ID
+                                            listaVehiculos[idVehiculo][1], // Marca
+                                            listaVehiculos[idVehiculo][2], // Modelo
+                                            listaVehiculos[idVehiculo][3], // Gama
+                                            listaVehiculos[idVehiculo][4], // Tipo
+                                            listaVehiculos[idVehiculo][5], // Cilindraje
+                                            listaVehiculos[idVehiculo][6]  // Precio
+                                        );
+                                        System.out.println("+----+------------------+------------------+--------+------------------+------------+------------+");
+
+                                        //? quitar el simbolo de $ y la coma, para convertir a double.
+                                        precioVehiculo = Double.parseDouble(listaVehiculos[idVehiculo][6].replace("$", "").replace(",", ""));
+
+                                        //? calcular descuento del 10% al precio del vehiculo por pagar de contado.
+                                        precioConDescuento = precioVehiculo * 0.10;
+                                        precioConDescuento = precioVehiculo - precioConDescuento;
+
+                                        System.out.println("\nPRECIO ORIGINAL -> $" + precioVehiculo + " DLLS");
+                                        System.out.println("DESCUENTO DEL 10% -> $" + precioConDescuento + " DLLS");
+                                        System.out.println("-----------------------------------------------------------------------------------------------------");
+
+                                        //? metodo de pago, aca se evaluara con condicional, solo seran dos opciones, quiza 3
+                                        System.out.println("DIGITE SU METODO DE PAGO | OPCION NUMERICA");
+                                        System.out.println("\n1 -> EFECTIVO");
+                                        System.out.println("2 -> TARJETA DE CREDITO/DEBITO");
+                                        System.out.println("-----------------------------------------------------------------------------------------------------");
+                                        System.out.print("-> "); opcionPago = input.nextInt();
+
+                                        if (opcionPago == 1) { //? pago en efectivo.
+                                            System.out.print("\nDIGITE SU MONTO DE PAGO -> "); pagoCliente = input.nextDouble();
+
+                                            //? calcular cambio, si el pago es mayor al precio del vehiculo.
+                                            if(pagoCliente >= precioConDescuento){
+
+                                                cambioCliente = pagoCliente - precioConDescuento;
+                                                System.out.println("SU CAMBIO ES -> $" + cambioCliente + " DLLS");
+                                                System.out.println("\nPRESIONE ENTER PARA CONTINUAR...");
+                                                System.out.println("-----------------------------------------------------------------------------------------------------");
+                                                System.out.print("-> ");
+
+                                                input.nextLine();
+                                                input.nextLine();
+
+                                            } else{
+                                                System.out.println("SU PAGO ES INSUFICIENTE, PRESIONE ENTER PARA CONTINUAR...");
+                                                System.out.println("-----------------------------------------------------------------------------------------------------");
+
+                                                System.out.print("-> ");
+
+                                                input.nextLine();
+                                                input.nextLine();
+
+                                            }
+
+                                            //? ACA LA FACTURA.
+                                        }
+
+                                        if(opcionPago == 2){ //? pago con tarjeta de credito o debito.
+                                            System.out.print("\nDIGITE SU MONTO DE PAGO -> "); pagoCliente = input.nextDouble();
+                                            System.out.println("\nPAGO EXITOSO, PRESIONE ENTER PARA CONTINUAR...");
+                                            System.out.println("-----------------------------------------------------------------------------------------------------");
+                                            System.out.print("-> ");
+                                            input.nextLine();
+                                            input.nextLine();
+
+                                            //? ACA LA FACTURA.
+                                        }
+
+                                        if (opcionPago != 1 && opcionPago != 2) { //? DEFAULT PERO EN CONDICIONALES.
+                                            System.out.println("\nERROR, OPCION NO VALIDA, PRESIONE ENTER PARA CONTINUAR...");
+                                            System.out.println("-----------------------------------------------------------------------------------------------------");
+                                            System.out.print("-> ");
+
+                                            input.nextLine();
+                                            input.nextLine();
+                                        }
+
+                                    break;
+
+                                    case 2: //? venta a credito, tambien conocido como a plazos.
+
+                                    break;
+
+                                    case 3: //? regresar al menu anterior -> Menu Ventas.
+
+                                        new ProcessBuilder("cmd", "/c", "cls").inheritIO().start().waitFor(); // Limpia la pantalla
+
+                                        System.out.println("----------------------------------------------------------------");
+                                        System.out.println("SISTEMA GESTION AUTOMOVILES | Universidad Tecnologica de Tijuana");
+                                        System.out.println("----------------------------------------------------------------");
+                                        System.out.println("REGRESAR AL MENU ANTERIOR | MENU VENTAS");
+                                        System.out.println("----------------------------------------------------------------");
+                                        System.out.println("\nPRESIONE ENTER PARA CONTINUAR...");
+                                        System.out.println("----------------------------------------------------------------");
+                                        System.out.print("-> ");
+
+                                        input.nextLine(); //? limpiar el buffer de entrada, ya que el usuario selecciono una opcion no valida.
+                                        input.nextLine(); //? se lee el enter para continuar, ya que el programa se va a cerrar.
+
+                                    break;
+
+                                    default: //? si el usuario no selecciona una opcion valida, se le indica que la opcion no es correcta.
+
+                                        new ProcessBuilder("cmd", "/c", "cls").inheritIO().start().waitFor();
+
+                                        System.out.println("-----------------------------------------------------------------------------------------------------");
+                                        System.out.println("SISTEMA GESTION AUTOMOVILES | Universidad Tecnologica de Tijuana");
+                                        System.out.println("-----------------------------------------------------------------------------------------------------");
+                                        System.out.println("OPCION NO VALIDA, PRESIONE ENTER PARA CONTINUAR"); //1System.out.println();
+                                        System.out.println("-----------------------------------------------------------------------------------------------------");
+                                        System.out.print("->");
+
+                                        input.nextLine();
+                                        input.nextLine();
+
+                                    break;
+                                }
+
+                            break;
+
+                            case 2: //? crear presupuesto...
+
+                            break;
+
+                            case 3: //? regresar al menu anterior...
+
+                                new ProcessBuilder("cmd", "/c", "cls").inheritIO().start().waitFor(); // Limpia la pantalla
+
+                                System.out.println("----------------------------------------------------------------");
+                                System.out.println("SISTEMA GESTION AUTOMOVILES | Universidad Tecnologica de Tijuana");
+                                System.out.println("----------------------------------------------------------------");
+                                System.out.println("REGRESAR AL MENU ANTERIOR | MENU VENTAS");
+                                System.out.println("----------------------------------------------------------------");
+                                System.out.println("\nPRESIONE ENTER PARA CONTINUAR...");
+                                System.out.println("----------------------------------------------------------------");
+                                System.out.print("->");
+
+                                input.nextLine(); //? limpiar el buffer de entrada, ya que el usuario selecciono una opcion no valida.
+                                input.nextLine(); //? se lee el enter para continuar, ya que el programa se va a cerrar.
+
+                            break;
+
+                            default: //? si el usuario no selecciona una opcion valida, se le indica que la opcion no es correcta.
+
+                                new ProcessBuilder("cmd", "/c", "cls").inheritIO().start().waitFor();
+
+                                System.out.println("-----------------------------------------------------------------------------------------------------");
+                                System.out.println("SISTEMA GESTION AUTOMOVILES | Universidad Tecnologica de Tijuana");
+                                System.out.println("-----------------------------------------------------------------------------------------------------");
+                                System.out.println("OPCION NO VALIDA, PRESIONE ENTER PARA CONTINUAR"); //1System.out.println();
+                                System.out.println("-----------------------------------------------------------------------------------------------------");
+                                System.out.print("->"); // DESPUES IMPLEMENTAR EL DO WHILE PARA QUE AQUI CIERRE...
+
+                                input.nextLine(); //? limpiar el buffer de entrada, ya que el usuario selecciono una opcion no valida.
+                                input.nextLine(); //? se lee el enter para continuar, ya que el programa se va a cerrar.
+
+                                break;
+                    }
+
+                break;
 
                 case 4: //? salir del programa...
 

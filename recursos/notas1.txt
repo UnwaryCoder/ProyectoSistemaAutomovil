@@ -2,8 +2,8 @@ Notas..
 
 estructura de proyecto
 -------------------------------------------------------------------------------------------
+//vista MENU PRINCIPAL
 
-.vista MENU PRINCIPAL
 ----------------------------------------------------------------
 SISTEMA GESTION AUTOMOVILES | Universidad Tecnologica de Tijuana
 ----------------------------------------------------------------
@@ -19,30 +19,11 @@ MENU OPCIONES|DIGITE OPCION NUMERICA
 ->
 -----------------------------------------------------------------------------------------------------
 
-.default primer menu
------------------------------------------------------------------------------------------------------
-SISTEMA GESTION AUTOMOVILES | Universidad Tecnologica de Tijuana
------------------------------------------------------------------------------------------------------
-NUMERO FUERA DE RANGO | PRESIONE ENTER PARA CONTINUAR....
-
------------------------------------------------------------------------------------------------------
-->
-
-.salirMenuPrincipal
------------------------------------------------------------------------------------------------------
-SISTEMA GESTION AUTOMOVILES | Universidad Tecnologica de Tijuana
------------------------------------------------------------------------------------------------------
-SALIDA DEL PROGRAMA | DIGITE OPCION NUMERICA
------------------------------------------------------------------------------------------------------
-PRESIONE ENTER PARA CONTINUAR...
------------------------------------------------------------------------------------------------------
-->
-
 //VISTA DE MENU 0 - CATALOGO DE VEHICULOS
 ----------------------------------------------------------------
 SISTEMA GESTION AUTOMOVILES | Universidad Tecnologica de Tijuana
 ----------------------------------------------------------------
-1. CATALOGO DE VEHICULOS | NOSE QUE TEXTO PONER AQUI
+MENU CATALOGO DE VEHICULOS | NOSE QUE TEXTO PONER AQUI
 ----------------------------------------------------------------
 CATEGORIAS DE GAMA | SELECCIONE OPCION NUMERICA
 
@@ -125,27 +106,6 @@ PRESIONE ENTER PARA VOLVER AL MENU ANTERIOR...
 -----------------------------------------------------------------------------------------------------
 ->
 
-1.1.3 gama baja
------------------------------------------------------------------------------------------------------
-SISTEMA GESTION AUTOMOVILES | Universidad Tecnologica de Tijuana
------------------------------------------------------------------------------------------------------
-TODOS LOS VEHICULOS DE GAMA ALTA-MEDIA-BAJA | idk
------------------------------------------------------------------------------------------------------
-| ID  | Marca            | Modelo           | Gama    | Tipo                | Cilindraje/Tipo Motor |
------------------------------------------------------------------------------------------------------
-| 1   | Nissan           | March            | Baja    | Carro Sencillo       | 4                     |
-| 2   | Mitsubishi       | Mirage           | Baja    | Carro Sencillo       | 3                     |
-| 3   | Ford             | EcoSport         | Baja    | SUV Compacto         | 4                     |
-| 4   | Suzuki           | Vitara           | Baja    | SUV Compacto         | 4                     |
-| 5   | Chevrolet        | Spark            | Baja    | Carro Sencillo       | 4                     |
-| 6   | Kia              | Rio              | Baja    | Carro Sencillo       | 4                     |
------------------------------------------------------------------------------------------------------|
-
-PRESIONE ENTER PARA VOLVER AL MENU ANTERIOR...
------------------------------------------------------------------------------------------------------
-->
-
-
 2. POR CATEGORIA, VENTANAS CONSECUENTES
 --------------------------------------------------------------------
 SISTEMA GESTION AUTOMOVILES | Universidad Tecnologica de Tijuana
@@ -164,16 +124,17 @@ SISTEMA GESTION AUTOMOVILES | Universidad Tecnologica de Tijuana
 ----------------------------------------------------------------
 SISTEMA GESTION AUTOMOVILES | Universidad Tecnologica de Tijuana
 ----------------------------------------------------------------
-1.1 FILTRADO POR CATEGORIA DE VEHICULOS | SELECCIONE OPCION NUMERICA
+TODOS LOS VEHICULOS TIPO SEDAN | MENU CATEGORIAS
 ----------------------------------------------------------------
 CICLO PARA CADA TIPO DE AUTO CON FORMATO DE tabla
 
-PRESIONE ENTER PARA CONTINUAR...(DIRECCIONA AL MENU PRINCIPAL..?)
+PRESIONE ENTER PARA CONTINUAR...(REGRESA A MENU CATEGORIAS)
 ----------------------------------------------------------------
 ->
 
 
 2.2 REGRESAR(VOLVER AL MENU ANTERIOR...)
+
 ----------------------------------------------------------------
 SISTEMA GESTION AUTOMOVILES | Universidad Tecnologica de Tijuana
 ----------------------------------------------------------------
@@ -201,7 +162,7 @@ SISTEMA GESTION AUTOMOVILES | Universidad Tecnologica de Tijuana
 ----------------------------------------------------------------
 SISTEMA GESTION AUTOMOVILES | Universidad Tecnologica de Tijuana
 ----------------------------------------------------------------
-1.1 FILTRADO POR N CILINDROS | PRESIONE ENTER PARA CONTINUAR
+FILTRADO POR N CILINDROS | MENU CILINDRAJE
 ----------------------------------------------------------------
 CICLO PARA MOSTRAR LOS VEHICULOS DE N CANTIDAD DE CILINDROS EN
 FORMATO DE TABLA TEXTO.
@@ -223,19 +184,72 @@ PRESIONE ENTER PARA CONTINUAR...
 
 
 4. MOSTRAR TODOS LOS VEHICULOS DEL CATALOGO
-----------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------------------------------
 SISTEMA GESTION AUTOMOVILES | Universidad Tecnologica de Tijuana
-----------------------------------------------------------------
-1.1 LISTA DE VEHICULOS EN CATALOGO | SISTEMA GESTION DE AUTOMOVILES
-----------------------------------------------------------------
-CICLO PARA IMPRIMIR TODA LA MATRIZ EN FORMATO DE TABLA.
+-----------------------------------------------------------------------------------------------------------------------------------
+LISTA DE VEHICULOS EN CATALOGO | MENU CATALOGO
+-----------------------------------------------------------------------------------------------------------------------------------|
+1                | Toyota           | Corolla          | Media            | SEDAN            | 4                | $300,000         |
+2                | Ford             | F-150            | Alta             | PICK UP          | 6                | $750,000         |
+3                | Nissan           | March            | Baja             | SEDAN            | 4                | $180,000         |
+4                | Chevrolet        | Silverado        | Alta             | PICK UP          | 8                | $800,000         |
+5                | Hyundai          | Elantra          | Media            | SEDAN            | 4                | $320,000         |
+6                | Honda            | CR-V             | Media            | SUV              | 4                | $450,000         |
+7                | Jeep             | Wrangler         | Alta             | SUV              | 6                | $900,000         |
+8                | Subaru           | Outback          | Media            | SUV              | 4                | $400,000         |
+9                | Volkswagen       | Jetta            | Media            | SEDAN            | 4                | $310,000         |
+10               | Dodge            | Charger          | Alta             | DEPORTIVO        | 6                | $1,200,000       |
+11               | BMW              | Serie 3          | Alta             | DEPORTIVO        | 4                | $1,500,000       |
+12               | Audi             | Q5               | Alta             | SUV              | 4                | $1,000,000       |
+13               | Kia              | Sportage         | Media            | SUV              | 4                | $450,000         |
+14               | Mercedes-Benz    | Clase C          | Alta             | DEPORTIVO        | 4                | $1,600,000       |
+15               | Tesla            | Model Y          | Alta             | SUV              | Eléctrico        | $1,300,000       |
+16               | Mitsubishi       | Mirage           | Baja             | SEDAN            | 3                | $170,000         |
+17               | Fiat             | 500X             | Media            | SUV              | 4                | $350,000         |
+18               | GMC              | Sierra           | Alta             | PICK UP          | 8                | $850,000         |
+19               | Ram              | 1500             | Alta             | PICK UP          | 8                | $880,000         |
+20               | Mazda            | CX-5             | Media            | SUV              | 4                | $420,000         |
+21               | Toyota           | Hilux            | Alta             | PICK UP          | 6                | $780,000         |
+22               | Ford             | EcoSport         | Baja             | SUV              | 4                | $230,000         |
+23               | Suzuki           | Vitara           | Baja             | SUV              | 4                | $240,000         |
+24               | Chevrolet        | Spark            | Baja             | SEDAN            | 4                | $150,000         |
+25               | Honda            | Civic            | Media            | SEDAN            | 4                | $340,000         |
+26               | Hyundai          | Tucson           | Media            | SUV              | 4                | $380,000         |
+27               | Nissan           | Frontier         | Media            | PICK UP          | 4                | $470,000         |
+28               | Jeep             | Grand Cherokee   | Alta             | SUV              | 6                | $950,000         |
+29               | Volkswagen       | Tiguan           | Media            | SUV              | 4                | $370,000         |
+30               | Kia              | Rio              | Baja             | SEDAN            | 4                | $190,000         |
 
 PRESIONE ENTER PARA CONTINUAR...
-----------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------------------------------|
 ->
 
 
+-----------------------------------------------------------------------------------------------------------------------------------
+SISTEMA GESTION AUTOMOVILES | Universidad Tecnologica de Tijuana
+-----------------------------------------------------------------------------------------------------------------------------------
+LISTA DE VEHICULOS EN CATALOGO | DIGITE OPCION NUMERICA
+-----------------------------------------------------------------------------------------------------------------------------------
++----+------------------+------------------+--------+------------------+------------+------------+
+| ID | Marca            | Modelo           | Gama   | Tipo             | Cilindraje | Precio     |
++----+------------------+------------------+--------+------------------+------------+------------+
+|  1 | Toyota           | Corolla          | Media  | SEDAN            | 4          | $300,000   |
+|  2 | Ford             | F-150            | Alta   | PICK UP          | 6          | $750,000   |
+|  3 | Nissan           | March            | Baja   | SEDAN            | 4          | $180,000   |
+|  4 | Chevrolet        | Silverado        | Alta   | PICK UP          | 8          | $800,000   |
+|  5 | Hyundai          | Elantra          | Media  | SEDAN            | 4          | $320,000   |
+|  6 | Honda            | CR-V             | Media  | SUV              | 4          | $450,000   |
+|  7 | Jeep             | Wrangler         | Alta   | SUV              | 6          | $900,000   |
+|  8 | Subaru           | Outback          | Media  | SUV              | 4          | $400,000   |
+|  9 | Volkswagen       | Jetta            | Media  | SEDAN            | 4          | $310,000   |
+| 10 | Dodge            | Charger          | Alta   | DEPORTIVO        | 6          | $1,200,000 |
+...
++----+------------------+------------------+--------+------------------+------------+------------+
+|-----------------------------------------------------------------------------------------------------------------------------------|
 
+PRESIONE ENTER PARA CONTINUAR
+-----------------------------------------------------------------------------------------------------------------------------------
+->
 
 ----------------------------------------------------------------------------------------------------------------------------------
 matriz
@@ -309,38 +323,285 @@ for (int i = 0; i < listaVehiculos.length; i++) {
 
     }
 }
-nueva matriz con id y precio
+
+----------------------------------------------------------------------------------------------------------------------------------------------
+vistas de ventas
+
+0. PRE VENTANA, INFORMACION DEL CLIENTE.
+----------------------------------------------------------------
+SISTEMA GESTION AUTOMOVILES | Universidad Tecnologica de Tijuana
+----------------------------------------------------------------
+MENU VENTAS | DIGITE INFORMACION DE CLIENTE.
+----------------------------------------------------------------
+NOMBRE COMPLETO           -> Juan perez
+CONTACTO (NUMERO O EMAIL) -> asdaskldjaslkdjasldk
+
+INFORMACION GUARDADA | PRESIONE ENTER PARA CONTINUAR...
+----------------------------------------------------------------
+->
+
+1. VENTANA MENU VENTAS.
+----------------------------------------------------------------
+SISTEMA GESTION AUTOMOVILES | Universidad Tecnologica de Tijuana
+----------------------------------------------------------------
+MENU VENTAS | DIGITE OPCION NUMERICA
+----------------------------------------------------------------
+1. REALIZAR VENTA DE VEHICULO.
+2. REALIZAR PRESUPUESTO.
+3. REGRESAR AL MENU ANTERIOR.
+----------------------------------------------------------------
+->
+
+1.1 REALIZAR VENTA DE VEHICULO
+----------------------------------------------------------------
+SISTEMA GESTION AUTOMOVILES | Universidad Tecnologica de Tijuana
+----------------------------------------------------------------
+MENU VENTA VEHICULO | DIGITE OPCION NUMERICA AL TIPO DE PAGO.
+----------------------------------------------------------------
+1. REALIZAR VENTA DE VEHICULO DE CONTADO
+2. REALIZAR VENTA DE VEHICULO A PLAZOS
+3. REGRESAR AL MENU ANTERIOR. (REGRESAR A MENU VENTAS)
+----------------------------------------------------------------
+->
+
+1.1.1, 1.1.2 REALIZAR VENTA DE VEHICULO DE (CONTADO, A PLAZOS)
+----------------------------------------------------------------
+SISTEMA GESTION AUTOMOVILES | Universidad Tecnologica de Tijuana
+----------------------------------------------------------------
+MENU VENTA VEHICULO PAGO DE CONTADO, PLAZOS | DIGITE ID DE VEHICULO
+----------------------------------------------------------------
+->
+
+VISTA DESPUES DE ID PARA PAGO, AMBOS CASOS..
+-----------------------------------------------------------------------------------------------------
+SISTEMA GESTION AUTOMOVILES | Universidad Tecnologica de Tijuana
+-----------------------------------------------------------------------------------------------------
+DETALLES DEL CLIENTE
+
+Nombre del Cliente: Juan Perez
+Contacto: (555) 123-4567
+-----------------------------------------------------------------------------------------------------
+
+MENU VENTA VEHICULO PAGO DE CONTADO, PLAZOS | INFORMACION DEL VEHICULO DE ID = [ID]
+
 +----+------------------+------------------+--------+------------------+------------+------------+
 | ID | Marca            | Modelo           | Gama   | Tipo             | Cilindraje | Precio     |
 +----+------------------+------------------+--------+------------------+------------+------------+
-|  1 | Toyota           | Corolla          | Media  | Carro Sencillo   | 4          | $300,000   |
-|  2 | Ford             | F-150            | Alta   | Camioneta        | 6          | $750,000   |
-|  3 | Nissan           | March            | Baja   | Carro Sencillo   | 4          | $180,000   |
-|  4 | Chevrolet        | Silverado        | Alta   | Camioneta        | 8          | $800,000   |
-|  5 | Hyundai          | Elantra          | Media  | Carro Sencillo   | 4          | $320,000   |
-|  6 | Honda            | CR-V             | Media  | SUV              | 4          | $450,000   |
-|  7 | Jeep             | Wrangler         | Alta   | SUV              | 6          | $900,000   |
-|  8 | Subaru           | Outback          | Media  | SUV              | 4          | $400,000   |
-|  9 | Volkswagen       | Jetta            | Media  | Carro Sencillo   | 4          | $310,000   |
-| 10 | Dodge            | Charger          | Alta   | Carro Deportivo  | 6          | $1,200,000 |
-| 11 | BMW              | Serie 3          | Alta   | Carro Deportivo  | 4          | $1,500,000 |
-| 12 | Audi             | Q5               | Alta   | SUV              | 4          | $1,000,000 |
-| 13 | Kia              | Sportage         | Media  | SUV              | 4          | $450,000   |
-| 14 | Mercedes-Benz    | Clase C          | Alta   | Carro Deportivo  | 4          | $1,600,000 |
-| 15 | Tesla            | Model Y          | Alta   | SUV              | Eléctrico  | $1,300,000 |
-| 16 | Mitsubishi       | Mirage           | Baja   | Carro Sencillo   | 3          | $170,000   |
-| 17 | Fiat             | 500X             | Media  | SUV Compacto     | 4          | $350,000   |
-| 18 | GMC              | Sierra           | Alta   | Camioneta        | 8          | $850,000   |
-| 19 | Ram              | 1500             | Alta   | Camioneta        | 8          | $880,000   |
-| 20 | Mazda            | CX-5             | Media  | SUV              | 4          | $420,000   |
-| 21 | Toyota           | Hilux            | Alta   | Camioneta        | 6          | $780,000   |
-| 22 | Ford             | EcoSport         | Baja   | SUV Compacto     | 4          | $230,000   |
-| 23 | Suzuki           | Vitara           | Baja   | SUV Compacto     | 4          | $240,000   |
-| 24 | Chevrolet        | Spark            | Baja   | Carro Sencillo   | 4          | $150,000   |
-| 25 | Honda            | Civic            | Media  | Carro Sencillo   | 4          | $340,000   |
-| 26 | Hyundai          | Tucson           | Media  | SUV Compacto     | 4          | $380,000   |
-| 27 | Nissan           | Frontier         | Media  | Camioneta        | 4          | $470,000   |
-| 28 | Jeep             | Grand Cherokee   | Alta   | SUV              | 6          | $950,000   |
-| 29 | Volkswagen       | Tiguan           | Media  | SUV Compacto     | 4          | $370,000   |
-| 30 | Kia              | Rio              | Baja   | Carro Sencillo   | 4          | $190,000   |
+|  1 | Toyota           | Corolla          | Media  | SEDAN            | 4          | $300,000   |
+-----------------------------------------------------------------------------------------------------
+Su precio es de [precio] | Su pago es de contado.
+
+Digite su metodo de pago
+
+1 -> Efectivo
+2 -> Tarjeta de Credito/Debito
+-----------------------------------------------------------------------------------------------------
+->
+
+Vista efectivo.
+-----------------------------------------------------------------------------------------------------
+SISTEMA GESTION AUTOMOVILES | Universidad Tecnologica de Tijuana
+-----------------------------------------------------------------------------------------------------
+DETALLES DEL CLIENTE
+
+Nombre del Cliente: Juan Perez
+Contacto: (555) 123-4567
+-----------------------------------------------------------------------------------------------------
+
+MENU VENTA VEHICULO PAGO DE CONTADO, PLAZOS | INFORMACION DEL VEHICULO DE ID = [ID]
+
 +----+------------------+------------------+--------+------------------+------------+------------+
+| ID | Marca            | Modelo           | Gama   | Tipo             | Cilindraje | Precio     |
++----+------------------+------------------+--------+------------------+------------+------------+
+|  1 | Toyota           | Corolla          | Media  | SEDAN            | 4          | $300,000   |
+-----------------------------------------------------------------------------------------------------
+Su precio es de [precio] | Su pago es de contado.
+
+Digite la cantidad a pagar.
+
+-----------------------------------------------------------------------------------------------------
+-> 400000
+
+vista efectivo cambio, factura
+-----------------------------------------------------------------------------------------------------
+SISTEMA GESTION AUTOMOVILES | Universidad Tecnologica de Tijuana
+-----------------------------------------------------------------------------------------------------
+DETALLES DEL CLIENTE
+
+Nombre del Cliente: Juan Perez
+Contacto: (555) 123-4567
+-----------------------------------------------------------------------------------------------------
+
+MENU VENTA VEHICULO PAGO DE CONTADO, PLAZOS | INFORMACION DEL VEHICULO DE ID = [ID]
+
++----+------------------+------------------+--------+------------------+------------+------------+
+| ID | Marca            | Modelo           | Gama   | Tipo             | Cilindraje | Precio     |
++----+------------------+------------------+--------+------------------+------------+------------+
+|  1 | Toyota           | Corolla          | Media  | SEDAN            | 4          | $300,000   |
+-----------------------------------------------------------------------------------------------------
+Su total es de [pagoCliente]
+
+Su cambio es de [cambioCliente]
+
+PRESIONE ENTER PARA CONTINUAR....
+-----------------------------------------------------------------------------------------------------
+-> 400000
+
+factura
+-----------------------------------------------------------------------------------------------------
+SISTEMA GESTION AUTOMOVILES | Universidad Tecnologica de Tijuana
+-----------------------------------------------------------------------------------------------------
+DETALLES DEL CLIENTE
+
+Nombre del Cliente: Juan Perez
+Contacto: (555) 123-4567
+-----------------------------------------------------------------------------------------------------
+
+MENU VENTA FACTURA COMPRA DE CONTADO, PLAZOS | INFORMACION DEL VEHICULO DE ID = [ID]
+
++----+------------------+------------------+--------+------------------+------------+------------+
+| ID | Marca            | Modelo           | Gama   | Tipo             | Cilindraje | Precio     |
++----+------------------+------------------+--------+------------------+------------+------------+
+|  1 | Toyota           | Corolla          | Media  | SEDAN            | 4          | $300,000   |
+-----------------------------------------------------------------------------------------------------
+Su total es de [pagoCliente]
+
+Su cambio es de [cambioCliente]
+
+PRESIONE ENTER PARA CONTINUAR....
+-----------------------------------------------------------------------------------------------------
+-> 400000
+
+
+
+propuesta factura.
+
+-----------------------------------------------------------------------------------------------------------------------------------
+SISTEMA GESTION AUTOMOVILES | Universidad Tecnologica de Tijuana
+-----------------------------------------------------------------------------------------------------------------------------------
+FACTURA DE COMPRA AUTOMOVIL | COMPRA EFECTUADA EXITOSAMENTE
+-----------------------------------------------------------------------------------------------------------------------------------
++----+--------+---------+-------+-------+------------+---------+
+| ID | Marca  | Modelo  | Gama  | Tipo  | Cilindraje | Precio  |
++----+--------+---------+-------+-------+------------+---------+
+| 1  | Toyota | Corolla | Media | SEDAN | 4          | $300,000|
++----+--------+---------+-------+-------+------------+---------+
+-----------------------------------------------------------------------------------------------------------------------------------
+
+INFORMACION DE PAGO
+-----------------------------------------------------------------------------------------------------------------------------------
+Metodo de Pago: Efectivo
+Total Pagado: $300,000
+Saldo Restante: $0
+-----------------------------------------------------------------------------------------------------------------------------------
+
+DETALLES DEL CLIENTE
+-----------------------------------------------------------------------------------------------------------------------------------
+Nombre del Cliente: Juan Perez
+Contacto: (555) 123-4567
+-----------------------------------------------------------------------------------------------------------------------------------
+Gracias por confiar en nuestro sistema | Universidad Tecnologica de Tijuana
+
+PRESIONE ENTER PARA CONTINUAR...
+-----------------------------------------------------------------------------------------------------------------------------------
+
+switch(opcionMenu2_1){
+    case 1: // Venta de contado, se le otorga un descuento de 10% al cliente.
+        // Limpia la pantalla
+        new ProcessBuilder("cmd", "/c", "cls").inheritIO().start().waitFor();
+
+        // Pedimos el ID del vehículo que se va a vender
+        System.out.println("----------------------------------------------------------------");
+        System.out.println("SISTEMA GESTION AUTOMOVILES | Universidad Tecnologica de Tijuana");
+        System.out.println("----------------------------------------------------------------");
+        System.out.println("MENU VENTA VEHICULO PAGO DE CONTADO | DIGITE ID DE VEHICULO");
+        System.out.println("----------------------------------------------------------------");
+        System.out.print("-> "); idVehiculo = input.nextInt();
+
+        // Validamos que el ID sea válido
+        if (idVehiculo < 0 || idVehiculo >= listaVehiculos.length) {
+            System.out.println("ERROR: El ID ingresado no es válido. Por favor, intente nuevamente.");
+            break; // Salimos del caso para evitar errores
+        }
+
+        System.out.println("\nINFORMACION GUARDADA | PRESIONE ENTER PARA CONTINUAR...");
+        System.out.println("----------------------------------------------------------------");
+        System.out.print("-> "); input.nextLine(); // Limpia el buffer
+        input.nextLine();
+
+        // Limpia la pantalla de nuevo
+        new ProcessBuilder("cmd", "/c", "cls").inheritIO().start().waitFor();
+        System.out.println("-----------------------------------------------------------------------------------------------------");
+        System.out.println("SISTEMA GESTION AUTOMOVILES | Universidad Tecnologica de Tijuana");
+        System.out.println("-----------------------------------------------------------------------------------------------------");
+        System.out.println("DETALLES DEL CLIENTE:");
+        System.out.println("\nNOMBRE DEL CLIENTE -> " + nombreCliente);
+        System.out.println("CONTACTO DEL CLIENTE -> " + contactoCliente);
+        System.out.println("-----------------------------------------------------------------------------------------------------");
+
+        // Mostramos la información del vehículo seleccionado
+        System.out.println("\nMENU VENTA VEHICULO PAGO DE CONTADO | INFORMACION DEL VEHICULO DE ID = [" + idVehiculo + "]");
+        System.out.println("+----+------------------+------------------+--------+------------------+------------+------------+");
+        System.out.println("| ID | Marca            | Modelo           | Gama   | Tipo             | Cilindraje | Precio     |");
+        System.out.println("+----+------------------+------------------+--------+------------------+------------+------------+");
+        System.out.printf("| %2s | %-16s | %-16s | %-6s | %-16s | %-10s | %-10s |\n",
+            listaVehiculos[idVehiculo][0], // ID
+            listaVehiculos[idVehiculo][1], // Marca
+            listaVehiculos[idVehiculo][2], // Modelo
+            listaVehiculos[idVehiculo][3], // Gama
+            listaVehiculos[idVehiculo][4], // Tipo
+            listaVehiculos[idVehiculo][5], // Cilindraje
+            listaVehiculos[idVehiculo][6]  // Precio
+        );
+        System.out.println("+----+------------------+------------------+--------+------------------+------------+------------+");
+
+        // Aplicar descuento al precio
+        double precioOriginal = Double.parseDouble(listaVehiculos[idVehiculo][6].replace("$", "").replace(",", ""));
+        double precioConDescuento = precioOriginal * 0.9; // Aplicamos el 10% de descuento
+        System.out.println("\nPRECIO ORIGINAL -> $" + precioOriginal + " DLLS");
+        System.out.println("PRECIO CON DESCUENTO -> $" + precioConDescuento + " DLLS");
+
+        // Solicitar método de pago
+        System.out.println("\nDIGITE SU METODO DE PAGO | OPCION NUMERICA");
+        System.out.println("\n1 -> EFECTIVO");
+        System.out.println("\n2 -> TARJETA DE CREDITO/DEBITO");
+        System.out.println("-----------------------------------------------------------------------------------------------------");
+
+        do {
+            System.out.print("-> "); opcionPago = input.nextInt();
+
+            if (opcionPago == 1) { // Pago en efectivo
+                System.out.println("\nDIGITE SU MONTO DE PAGO -> "); 
+                double pagoCliente = input.nextDouble();
+
+                // Calcular cambio, si el pago es mayor o igual al precio
+                if (pagoCliente >= precioConDescuento) {
+                    double cambio = pagoCliente - precioConDescuento;
+                    System.out.println("\nSU CAMBIO ES DE -> $" + cambio + " DLLS");
+                    System.out.println("\nPRESIONE ENTER PARA CONTINUAR...");
+                    System.out.println("-----------------------------------------------------------------------------------------------------");
+                    System.out.print("-> "); input.nextLine();
+                    input.nextLine(); // Espera a que el usuario presione Enter
+                } else {
+                    System.out.println("\nERROR: Monto insuficiente. Por favor, intente de nuevo.");
+                }
+            } else if (opcionPago == 2) { // Pago con tarjeta
+                System.out.println("\nHA SELECCIONADO TARJETA DE CREDITO/DEBITO.");
+                System.out.println("PROCESANDO PAGO...");
+                System.out.println("EL PAGO POR EL VEHICULO ES DE -> $" + precioConDescuento + " DLLS");
+                System.out.println("PAGO COMPLETADO EXITOSAMENTE.");
+                System.out.println("\nPRESIONE ENTER PARA CONTINUAR...");
+                System.out.print("-> "); input.nextLine();
+                input.nextLine(); // Espera a que el usuario presione Enter
+            } else { // Opción inválida
+                System.out.println("\nERROR: Opción no válida. Intente de nuevo.");
+            }
+
+        } while (opcionPago != 1 && opcionPago != 2); // Repite mientras no sea una opción válida
+
+        break;
+
+    default:
+        System.out.println("Opción no válida.");
+        break;
+}
