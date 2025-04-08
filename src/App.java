@@ -44,9 +44,10 @@ public class App {
         String[] opcionesMenu1_4 = {"4 CILINDROS", "6 CILINDROS", "8 CILINDROS", "REGRESAR"};
         String[] opcionesMenu2 = {"REALIZAR VENTA DE VEHICULOS", "REALIZAR PRESUPUESTO DE VEHICULOS", "REGRESAR AL MENU ANTERIOR"};
         String[] opcionesMenu2_1 = {"RELIZAR VENTA DE VEHICULO DE CONTADO", "REALIZAR VENTA DE VEHICULO A CREDITO", "REGRESAR AL MENU ANTERIOR"};
-        int opcionMenu1_1 = 0, opcionMenuGamas = 0, auxMenuPrincipal = 1, auxMenuGamas = 0, auxMenuGamas2 = 0, opcionMenuCategorias = 0, opcionMenuCilindraje = 0, opcionMenuVentas = 0, opcionMenu2_1 = 0, idVehiculo, opcionPago;
+        int[] opcionesMeses = {6, 12, 24, 36};
+        int opcionMenu1_1 = 0, opcionMenuGamas = 0, auxMenuPrincipal = 1, auxMenuGamas = 0, auxMenuGamas2 = 0, opcionMenuCategorias = 0, opcionMenuCilindraje = 0, opcionMenuVentas = 0, opcionMenu2_1 = 0, idVehiculo, opcionPago, iteradorWhile = 0, opcionMeses = 0;
         String nombreCliente = "", contactoCliente = "";
-        double pagoCliente, precioVehiculo, precioConDescuento, cambioCliente;
+        double pagoCliente, precioVehiculo, precioConDescuento, cambioCliente = 0, engancheVehiculo, pagoPorMes;
 
         do{ //? do while para el menu principal, se va a repetir hasta que el usuario seleccione la opcion de salir.
             new ProcessBuilder("cmd", "/c", "cls").inheritIO().start().waitFor();
@@ -868,10 +869,9 @@ public class App {
                                                 input.nextLine();
                                                 input.nextLine();
 
-                                            } else{
+                                            } else{ //? si el pago es menor al precio del vehiculo.
                                                 System.out.println("SU PAGO ES INSUFICIENTE, PRESIONE ENTER PARA CONTINUAR...");
                                                 System.out.println("-----------------------------------------------------------------------------------------------------");
-
                                                 System.out.print("-> ");
 
                                                 input.nextLine();
@@ -880,6 +880,49 @@ public class App {
                                             }
 
                                             //? ACA LA FACTURA.
+                                            new ProcessBuilder("cmd", "/c", "cls").inheritIO().start().waitFor();
+
+                                            System.out.println("-----------------------------------------------------------------------------------------------------");
+                                            System.out.println("SISTEMA GESTION AUTOMOVILES | Universidad Tecnologica de Tijuana");
+                                            System.out.println("-----------------------------------------------------------------------------------------------------");
+                                            System.out.println("FACTURA DE COMPRA AUTOMOVIL | COMPRA EFECTUADA CON EXITO");
+                                            System.out.println("-----------------------------------------------------------------------------------------------------");
+
+                                            System.out.println("+----+------------------+------------------+--------+------------------+------------+------------+");
+                                            System.out.println("| ID | Marca            | Modelo           | Gama   | Tipo             | Cilindraje | Precio     |");
+                                            System.out.println("+----+------------------+------------------+--------+------------------+------------+------------+");
+
+                                            System.out.printf("| %2s | %-16s | %-16s | %-6s | %-16s | %-10s | %-10s |\n",
+                                            listaVehiculos[idVehiculo][0], // ID
+                                            listaVehiculos[idVehiculo][1], // Marca
+                                            listaVehiculos[idVehiculo][2], // Modelo
+                                            listaVehiculos[idVehiculo][3], // Gama
+                                            listaVehiculos[idVehiculo][4], // Tipo
+                                            listaVehiculos[idVehiculo][5], // Cilindraje
+                                            listaVehiculos[idVehiculo][6]  // Precio
+                                            );
+                                            System.out.println("-----------------------------------------------------------------------------------------------------");
+
+                                            System.out.println("\nINFORMACION DE PAGO");
+                                            System.out.println("-----------------------------------------------------------------------------------------------------");
+                                            System.out.println("METODO DE PAGO -> EFECTIVO");
+                                            System.out.println("MONTO DE PAGO -> $" + pagoCliente + " DLLS");
+                                            System.out.println("SALDO SOBRANTE -> $" + cambioCliente + " DLLS");
+                                            System.out.println("-----------------------------------------------------------------------------------------------------");
+
+                                            System.out.println("\nINFORMACION DEL CLIENTE");
+                                            System.out.println("-----------------------------------------------------------------------------------------------------");
+                                            System.out.println("NOMBRE DEL CLIENTE -> " + nombreCliente);
+                                            System.out.println("CONTACTO DEL CLIENTE -> " + contactoCliente);
+                                            System.out.println("-----------------------------------------------------------------------------------------------------");
+                                            System.out.println("GRACIAS POR CONFIAR EN NUESTRO SISTEMA | UNIVERSIDAD TECNOLOGICA DE TIJUANA");
+                                            System.out.println("\nPRESIONE ENTER PARA CONTINUAR...");
+                                            System.out.println("-----------------------------------------------------------------------------------------------------");
+                                            System.out.print("-> ");
+
+                                            input.nextLine();
+                                            input.nextLine();
+
                                         }
 
                                         if(opcionPago == 2){ //? pago con tarjeta de credito o debito.
@@ -891,6 +934,49 @@ public class App {
                                             input.nextLine();
 
                                             //? ACA LA FACTURA.
+                                            new ProcessBuilder("cmd", "/c", "cls").inheritIO().start().waitFor();
+
+                                            System.out.println("-----------------------------------------------------------------------------------------------------");
+                                            System.out.println("SISTEMA GESTION AUTOMOVILES | Universidad Tecnologica de Tijuana");
+                                            System.out.println("-----------------------------------------------------------------------------------------------------");
+                                            System.out.println("FACTURA DE COMPRA AUTOMOVIL | COMPRA EFECTUADA CON EXITO");
+                                            System.out.println("-----------------------------------------------------------------------------------------------------");
+                                            System.out.println("\nINFORMACION DE COMPRA");
+
+                                            System.out.println("+----+------------------+------------------+--------+------------------+------------+------------+");
+                                            System.out.println("| ID | Marca            | Modelo           | Gama   | Tipo             | Cilindraje | Precio     |");
+                                            System.out.println("+----+------------------+------------------+--------+------------------+------------+------------+");
+
+                                            System.out.printf("| %2s | %-16s | %-16s | %-6s | %-16s | %-10s | %-10s |\n",
+                                            listaVehiculos[idVehiculo][0], // ID
+                                            listaVehiculos[idVehiculo][1], // Marca
+                                            listaVehiculos[idVehiculo][2], // Modelo
+                                            listaVehiculos[idVehiculo][3], // Gama
+                                            listaVehiculos[idVehiculo][4], // Tipo
+                                            listaVehiculos[idVehiculo][5], // Cilindraje
+                                            listaVehiculos[idVehiculo][6]  // Precio
+                                            );
+                                            System.out.println("-----------------------------------------------------------------------------------------------------");
+
+                                            System.out.println("\nINFORMACION DE PAGO");
+                                            System.out.println("-----------------------------------------------------------------------------------------------------");
+                                            System.out.println("METODO DE PAGO   -> TARJETA DE CREDITO/DEBITO");
+                                            System.out.println("TARJETA DE CLIENTE -> " + pagoCliente);
+                                            System.out.println("-----------------------------------------------------------------------------------------------------");
+
+                                            System.out.println("\nINFORMACION DEL CLIENTE");
+                                            System.out.println("-----------------------------------------------------------------------------------------------------");
+                                            System.out.println("NOMBRE DEL CLIENTE -> " + nombreCliente);
+                                            System.out.println("CONTACTO DEL CLIENTE -> " + contactoCliente);
+                                            System.out.println("-----------------------------------------------------------------------------------------------------");
+                                            System.out.println("GRACIAS POR CONFIAR EN NUESTRO SISTEMA | UNIVERSIDAD TECNOLOGICA DE TIJUANA");
+                                            System.out.println("\nPRESIONE ENTER PARA CONTINUAR...");
+                                            System.out.println("-----------------------------------------------------------------------------------------------------");
+                                            System.out.print("-> ");
+
+                                            input.nextLine();
+                                            input.nextLine();
+
                                         }
 
                                         if (opcionPago != 1 && opcionPago != 2) { //? DEFAULT PERO EN CONDICIONALES.
@@ -905,6 +991,235 @@ public class App {
                                     break;
 
                                     case 2: //? venta a credito, tambien conocido como a plazos.
+                                        new ProcessBuilder("cmd", "/c", "cls").inheritIO().start().waitFor();
+
+                                        //? pedimos el ID del vehiculo que se va a vender.
+                                        System.out.println("----------------------------------------------------------------");
+                                        System.out.println("SISTEMA GESTION AUTOMOVILES | Universidad Tecnologica de Tijuana");
+                                        System.out.println("----------------------------------------------------------------");
+                                        System.out.println("MENU VENTA VEHICULO PAGO A PLAZOS | DIGITE ID DE VEHICULO");
+                                        System.out.println("----------------------------------------------------------------");
+                                        System.out.print("-> "); idVehiculo = input.nextInt();
+
+                                        idVehiculo = idVehiculo - 1; //? restamos 1 al ID, ya que el ID empieza en 0.
+
+                                        System.out.println("\nINFORMACION GUARDADA | PRESIONE ENTER PARA CONTINUAR...");
+                                        System.out.println("----------------------------------------------------------------");
+                                        System.out.print("-> "); input.nextLine();
+
+                                        //? procedemos a calcular lo necesario para el pago a plazos.
+                                        new ProcessBuilder("cmd", "/c", "cls").inheritIO().start().waitFor();
+                                        System.out.println("-----------------------------------------------------------------------------------------------------");
+                                        System.out.println("SISTEMA GESTION AUTOMOVILES | Universidad Tecnologica de Tijuana");
+                                        System.out.println("-----------------------------------------------------------------------------------------------------");
+                                        System.out.println("DETALLES DEL CLIENTE:");
+                                        System.out.println("\nNOMBRE DEL CLIENTE -> " + nombreCliente);
+                                        System.out.println("CONTACTO DEL CLIENTE -> " + contactoCliente);
+                                        System.out.println("-----------------------------------------------------------------------------------------------------");
+
+                                        System.out.println("\nMENU VENTA VEHICULO PAGO A PLAZOS | INFORMACION DEL VEHICULO DE ID = [" + idVehiculo + "]");
+                                        System.out.println("+----+------------------+------------------+--------+------------------+------------+------------+");
+                                        System.out.println("| ID | Marca            | Modelo           | Gama   | Tipo             | Cilindraje | Precio     |");
+                                        System.out.println("+----+------------------+------------------+--------+------------------+------------+------------+");
+
+                                        //? imprimir el vehiculo segun el ID, como solo es un vehiculo, no necesitamos ciclos, porque conocemos el valor de la fila, y las columnas.
+                                        System.out.printf("| %2s | %-16s | %-16s | %-6s | %-16s | %-10s | %-10s |\n",
+                                            listaVehiculos[idVehiculo][0], // ID
+                                            listaVehiculos[idVehiculo][1], // Marca
+                                            listaVehiculos[idVehiculo][2], // Modelo
+                                            listaVehiculos[idVehiculo][3], // Gama
+                                            listaVehiculos[idVehiculo][4], // Tipo
+                                            listaVehiculos[idVehiculo][5], // Cilindraje
+                                            listaVehiculos[idVehiculo][6]  // Precio
+                                        );
+                                        System.out.println("-----------------------------------------------------------------------------------------------------");
+
+                                        //? quitar el simbolo de $ y la coma, para convertir a double el precio de vehiculo.
+                                        precioVehiculo = Double.parseDouble(listaVehiculos[idVehiculo][6].replace("$", "").replace(",", ""));
+
+                                        //? calcular enganche teniendo el precio, el enganche sera del 30% del precio del vehiculo.
+                                        engancheVehiculo = precioVehiculo * 0.30;
+                                        //engancheVehiculo = precioVehiculo - engancheVehiculo;
+
+                                        System.out.println("\nPRECIO ORIGINAL -> " + listaVehiculos[idVehiculo][6] + " DLLS | SU ENGANCHE ES DE [$" + engancheVehiculo + " DLLS]");
+                                        System.out.println("\nSELECCIONE LOS MESES A PAGAR | OPCION NUMERICA");
+
+                                        System.out.println();
+                                        while (iteradorWhile <= 2){
+                                            System.out.println(iteradorWhile + 1 + " -> " + opcionesMeses[iteradorWhile] + " meses");
+
+                                            iteradorWhile++;
+                                        } iteradorWhile = 0; //? reiniciamos el iterador para que vuelva a empezar desde 0.
+
+                                        System.out.println("-----------------------------------------------------------------------------------------------------");
+                                        System.out.print("-> "); opcionMeses = input.nextInt();
+
+                                        if(opcionMeses!=1 && opcionMeses!=2 && opcionMeses!=3){ //? si el usuario no selecciona una opcion valida, se le indica que la opcion no es correcta.
+                                            new ProcessBuilder("cmd", "/c", "cls").inheritIO().start().waitFor();
+
+                                            System.out.println("-----------------------------------------------------------------------------------------------------");
+                                            System.out.println("SISTEMA GESTION AUTOMOVILES | Universidad Tecnologica de Tijuana");
+                                            System.out.println("-----------------------------------------------------------------------------------------------------");
+                                            System.out.println("OPCION NO VALIDA, PRESIONE ENTER PARA CONTINUAR"); //1System.out.println();
+                                            System.out.println("-----------------------------------------------------------------------------------------------------");
+                                            System.out.print("->");
+
+                                            input.nextLine();
+                                            input.nextLine();
+                                            break;
+
+                                        }
+
+                                        System.out.println("\nSELECCIONE SU METODO DE PAGO | OPCION NUMERICA");
+                                        System.out.println("\n1 -> EFECTIVO");
+                                        System.out.println("2 -> TARJETA DE CREDITO/DEBITO");
+                                        System.out.println("-----------------------------------------------------------------------------------------------------");
+                                        System.out.print("-> "); opcionPago = input.nextInt();
+
+                                        if (opcionPago != 1 && opcionPago != 2) { //? DEFAULT PERO EN CONDICIONALES.
+                                            System.out.println("\nERROR, OPCION NO VALIDA, PRESIONE ENTER PARA CONTINUAR...");
+                                            System.out.println("-----------------------------------------------------------------------------------------------------");
+                                            System.out.print("-> ");
+
+                                            input.nextLine();
+                                            input.nextLine();
+                                        }
+
+                                        if (opcionPago == 1) { //? pago en efectivo.
+                                            System.out.print("\nDIGITE SU MONTO DE PAGO PARA ENGANCHE -> "); pagoCliente = input.nextDouble();
+
+                                            //? calcular cambio, si el pago es mayor al precio del vehiculo.
+                                            if(pagoCliente >= engancheVehiculo){
+
+                                                cambioCliente = pagoCliente - engancheVehiculo;
+                                                System.out.println("SU CAMBIO ES -> $" + cambioCliente + " DLLS");
+                                                System.out.println("\nPRESIONE ENTER PARA CONTINUAR...");
+                                                System.out.println("-----------------------------------------------------------------------------------------------------");
+                                                System.out.print("-> ");
+
+                                                input.nextLine();
+                                                input.nextLine();
+
+                                            } else{ //? si el pago es menor al precio del vehiculo.
+                                                System.out.println("SU PAGO ES INSUFICIENTE, PRESIONE ENTER PARA CONTINUAR...");
+                                                System.out.println("-----------------------------------------------------------------------------------------------------");
+                                                System.out.print("-> ");
+
+                                                input.nextLine();
+                                                input.nextLine();
+
+                                            }
+
+                                            //? ACA LA FACTURA.
+                                            pagoPorMes = (precioVehiculo - engancheVehiculo) / opcionesMeses[opcionMeses - 1]; //? pago por mes, el saldo restante dividido entre los meses a pagar.
+                                            new ProcessBuilder("cmd", "/c", "cls").inheritIO().start().waitFor();
+
+                                            System.out.println("-----------------------------------------------------------------------------------------------------");
+                                            System.out.println("SISTEMA GESTION AUTOMOVILES | Universidad Tecnologica de Tijuana");
+                                            System.out.println("-----------------------------------------------------------------------------------------------------");
+                                            System.out.println("FACTURA DE COMPRA AUTOMOVIL | COMPRA EFECTUADA CON EXITO");
+                                            System.out.println("-----------------------------------------------------------------------------------------------------");
+                                            System.out.println("+----+------------------+------------------+--------+------------------+------------+------------+");
+                                            System.out.println("| ID | Marca            | Modelo           | Gama   | Tipo             | Cilindraje | Precio     |");
+                                            System.out.println("+----+------------------+------------------+--------+------------------+------------+------------+");
+
+                                            System.out.printf("| %2s | %-16s | %-16s | %-6s | %-16s | %-10s | %-10s |\n",
+                                            listaVehiculos[idVehiculo][0], // ID
+                                            listaVehiculos[idVehiculo][1], // Marca
+                                            listaVehiculos[idVehiculo][2], // Modelo
+                                            listaVehiculos[idVehiculo][3], // Gama
+                                            listaVehiculos[idVehiculo][4], // Tipo
+                                            listaVehiculos[idVehiculo][5], // Cilindraje
+                                            listaVehiculos[idVehiculo][6]  // Precio
+                                            );
+                                            System.out.println("-----------------------------------------------------------------------------------------------------");
+
+                                            System.out.println("\nINFORMACION DE PAGO");
+                                            System.out.println("-----------------------------------------------------------------------------------------------------");
+                                            System.out.println("METODO DE PAGO -> EFECTIVO");
+                                            System.out.println("MONTO DE PAGO -> $" + pagoCliente + " DLLS");
+                                            System.out.println("SALDO SOBRANTE -> $" + cambioCliente + " DLLS");
+
+                                            System.out.println("\nSU COMPRA ES A PLAZOS DE -> " + opcionesMeses[opcionMeses - 1] + " MESES");
+                                            System.out.println("SU ENGANCHE ES DE -> $" + engancheVehiculo + " DLLS");
+                                            System.out.println("SU SALDO RESTANTE ES DE -> $" + (precioVehiculo - engancheVehiculo) + " DLLS");
+                                            System.out.println("SU SALDO RESTANTE A PAGAR POR MES ES DE -> $" + pagoPorMes + " DLLS");
+                                            System.out.println("-----------------------------------------------------------------------------------------------------");
+
+                                            System.out.println("\nINFORMACION DEL CLIENTE");
+                                            System.out.println("-----------------------------------------------------------------------------------------------------");
+                                            System.out.println("NOMBRE DEL CLIENTE -> " + nombreCliente);
+                                            System.out.println("CONTACTO DEL CLIENTE -> " + contactoCliente);
+                                            System.out.println("-----------------------------------------------------------------------------------------------------");
+                                            System.out.println("GRACIAS POR CONFIAR EN NUESTRO SISTEMA | UNIVERSIDAD TECNOLOGICA DE TIJUANA");
+                                            System.out.println("\nPRESIONE ENTER PARA CONTINUAR...");
+                                            System.out.println("-----------------------------------------------------------------------------------------------------");
+                                            System.out.print("-> ");
+
+                                            input.nextLine();
+                                            input.nextLine();
+
+                                        }
+
+                                        if(opcionPago == 2){ //? pago con tarjeta de credito o debito.
+                                            System.out.print("\nDIGITE SU TARJETA DE CREDITO/DEBITO -> "); pagoCliente = input.nextDouble();
+
+                                            System.out.println("\nPAGO EXITOSO, PRESIONE ENTER PARA CONTINUAR...");
+                                            System.out.println("-----------------------------------------------------------------------------------------------------");
+
+                                            //? ACA LA FACTURA.
+                                            pagoPorMes = (precioVehiculo - engancheVehiculo) / opcionesMeses[opcionMeses - 1]; //? pago por mes, el saldo restante dividido entre los meses a pagar.
+                                            new ProcessBuilder("cmd", "/c", "cls").inheritIO().start().waitFor();
+
+                                            System.out.println("-----------------------------------------------------------------------------------------------------");
+                                            System.out.println("SISTEMA GESTION AUTOMOVILES | Universidad Tecnologica de Tijuana");
+                                            System.out.println("-----------------------------------------------------------------------------------------------------");
+                                            System.out.println("FACTURA DE COMPRA AUTOMOVIL | COMPRA EFECTUADA CON EXITO");
+                                            System.out.println("-----------------------------------------------------------------------------------------------------");
+                                            System.out.println("\nINFORMACION DE COMPRA");
+
+                                            System.out.println("+----+------------------+------------------+--------+------------------+------------+------------+");
+                                            System.out.println("| ID | Marca            | Modelo           | Gama   | Tipo             | Cilindraje | Precio     |");
+                                            System.out.println("+----+------------------+------------------+--------+------------------+------------+------------+");
+
+                                            System.out.printf("| %2s | %-16s | %-16s | %-6s | %-16s | %-10s | %-10s |\n",
+                                            listaVehiculos[idVehiculo][0], // ID
+                                            listaVehiculos[idVehiculo][1], // Marca
+                                            listaVehiculos[idVehiculo][2], // Modelo
+                                            listaVehiculos[idVehiculo][3], // Gama
+                                            listaVehiculos[idVehiculo][4], // Tipo
+                                            listaVehiculos[idVehiculo][5], // Cilindraje
+                                            listaVehiculos[idVehiculo][6]  // Precio
+                                            );
+                                            System.out.println("-----------------------------------------------------------------------------------------------------");
+
+                                            System.out.println("\nINFORMACION DE PAGO");
+                                            System.out.println("-----------------------------------------------------------------------------------------------------");
+                                            System.out.println("METODO DE PAGO -> TARJETA DE CREDITO/DEBITO");
+                                            System.out.println("TARJETA DE CLIENTE -> *" + ((int)pagoCliente % 10000)); //? solo se muestran los ultimos 4 digitos de la tarjeta.
+
+                                            System.out.println("\nSU COMPRA ES A PLAZOS DE -> " + opcionesMeses[opcionMeses - 1] + " MESES");
+                                            System.out.println("SU ENGANCHE ES DE -> $" + engancheVehiculo + " DLLS");
+                                            System.out.println("SU SALDO RESTANTE ES DE -> $" + (precioVehiculo - engancheVehiculo) + " DLLS");
+                                            System.out.println("SU SALDO RESTANTE A PAGAR POR MES ES DE -> $" + pagoPorMes + " DLLS");
+                                            System.out.println("-----------------------------------------------------------------------------------------------------");
+
+                                            System.out.println("\nINFORMACION DEL CLIENTE");
+                                            System.out.println("-----------------------------------------------------------------------------------------------------");
+                                            System.out.println("NOMBRE DEL CLIENTE -> " + nombreCliente);
+                                            System.out.println("CONTACTO DEL CLIENTE -> " + contactoCliente);
+                                            System.out.println("-----------------------------------------------------------------------------------------------------");
+                                            System.out.println("GRACIAS POR CONFIAR EN NUESTRO SISTEMA | UNIVERSIDAD TECNOLOGICA DE TIJUANA");
+                                            System.out.println("\nPRESIONE ENTER PARA CONTINUAR...");
+                                            System.out.println("-----------------------------------------------------------------------------------------------------");
+                                            System.out.print("-> ");
+
+                                            input.nextLine();
+                                            input.nextLine();
+
+                                        }
+
+
 
                                     break;
 
